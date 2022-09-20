@@ -5,12 +5,12 @@ const Card = ({ priority, title }) => {
     <div
       className={
         priority === 1
-          ? 'tomato'
+          ? 'food tomato'
           : priority === 2
-          ? 'meat'
+          ? 'food meat'
           : priority === 3
-          ? 'cheese'
-          : 'lettuce'
+          ? 'food cheese'
+          : 'food lettuce'
       }
     >
       {title}
