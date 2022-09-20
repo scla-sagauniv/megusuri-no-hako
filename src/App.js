@@ -1,13 +1,13 @@
-import "./App.css";
-import Main from "./components/Main";
+import './App.css';
+import Main from './components/Main';
 
 function App() {
-	return (
-		<div style={{ padding: "50px" }}>
-			<h1 style={{ merginBottom: "20px" }}>Trello風のアプリ</h1>
-			<Main />
-		</div>
-	);
+  return (
+    <div style={{ padding: '50px' }}>
+      <h1 style={{ merginBottom: '20px' }}>Trello風のアプリ</h1>
+      <Main />
+    </div>
+  );
 }
 
 export default App;

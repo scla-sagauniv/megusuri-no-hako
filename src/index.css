@@ -14,7 +14,7 @@ body {
   height: 100vh;
   color: #e4e4e4;
   line-height: 1.5;
-  font-family: "M PLUS Rounded 1c";
+  font-family: 'M PLUS Rounded 1c';
 }
 
 .trello {
@@ -25,30 +25,28 @@ body {
 .trello-section {
   width: 400px;
   /* border: 1px solid white; */
-  background: rgb(255,239,240);
+  background: rgb(255, 239, 240);
   padding: 10px;
   border-radius: 10px;
   margin-left: 10px;
 }
 
-
 .done-section {
   width: 400px;
   /* border: 1px solid white; */
-  background-color:transparent;
-  padding: 0 10px 10px 10px ;
+  background-color: transparent;
+  padding: 0 10px 10px 10px;
   border-radius: 10px;
   margin-left: 10px;
 }
 
 .trello-section-title {
-  text-align:  center; 
+  text-align: center;
   color: black;
   font-size: 1.2rem;
   font-weight: 50;
   margin: 10px 0 20px;
 }
-
 
 .done-top-section-title {
   color: black;
@@ -57,11 +55,11 @@ body {
   font-size: 1.2rem;
   font-weight: 30;
   margin: 0 0 0;
-  text-align:  center; 
-  border: 1px solid rgb(112,112,112);
+  text-align: center;
+  border: 1px solid rgb(112, 112, 112);
   border-top-left-radius: 70px;
   border-top-right-radius: 70px;
-  background-color: rgb(209,163,36);
+  background-color: rgb(209, 163, 36);
 }
 
 .done-botomm-section-title {
@@ -71,11 +69,11 @@ body {
   font-size: 1.2rem;
   font-weight: 30;
   margin-top: 10px;
-  text-align:  center; 
-  border: 1px solid rgb(112,112,112);
+  text-align: center;
+  border: 1px solid rgb(112, 112, 112);
   border-bottom-left-radius: 70px;
   border-bottom-right-radius: 70px;
-  background-color: rgb(209,163,36);
+  background-color: rgb(209, 163, 36);
 }
 
 .card {
@@ -95,7 +93,7 @@ body {
 }
 
 .lettuce {
-  color:black;
+  color: black;
   padding: 30px;
   background-image: url(img/retasu.svg);
   background-size: cover;
@@ -104,7 +102,7 @@ body {
 }
 
 .cheese {
-  color:black;
+  color: black;
   padding: 30px;
   background-image: url(img/cheese.svg);
   background-size: cover;
