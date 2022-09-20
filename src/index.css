@@ -8,11 +8,11 @@ body {
   background: rgb(193, 51, 51);
   background: linear-gradient(
     126deg,
-    rgba(61, 93, 189, 1) 0%,
-    rgba(33, 63, 107, 1) 96%
+    rgba(224, 11, 23, 1) 0%,
+    rgb(172, 24, 34) 96%
   );
   height: 100vh;
-  color: #e4e4e4;
+  color: #1f1b1b;
   line-height: 1.5;
   font-family: "M PLUS Rounded 1c";
 }
