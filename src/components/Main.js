@@ -71,12 +71,12 @@ const Main = () => {
 						<Droppable key={section.id} droppableId={section.id}>
 							{provided => (
 								<div
-									className={id != 4 ? "trello-section" : "done-section"}
+									className={id !== 4 ? "trello-section" : "done-section"}
 									ref={provided.innerRef}
 									{...provided.droppableProps}>
 									<div
 										className={
-											id != 4 ? "trello-section-title" : "done-top-section-title"
+											id !== 4 ? "trello-section-title" : "done-top-section-title"
 										}>
 										{section.title}
 									</div>
@@ -103,7 +103,7 @@ const Main = () => {
 												</Draggable>
 											);
 										})}
-										<div className={id != 4 ? "" : "done-botomm-section-title"}>
+										<div className={id !== 4 ? "" : "done-botomm-section-title"}>
 										</div>
 
 										{provided.placeholder}
