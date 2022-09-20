@@ -65,43 +65,54 @@ const Main = () => {
 	return (
 		<DragDropContext onDragEnd={onDragEnd}>
 			<div className='trello'>
-				{data.map(section => (
-					<Droppable key={section.id} droppableId={section.id}>
-						{provided => (
-							<div
-								className='trello-section'
-								ref={provided.innerRef}
-								{...provided.droppableProps}>
-								<div className='trello-section-title'>{section.title}</div>
-								<div className='trello-section-content'>
-									{section.tasks.map((tasks, index) => {
-										const priority = tasks.priority;
-										return (
-											<Draggable
-												draggableId={tasks.id}
-												index={index}
-												key={tasks.id}>
-												{(provided, snapshot) => (
-													<div
-														ref={provided.innerRef}
-														{...provided.draggableProps}
-														{...provided.dragHandleProps}
-														style={{
-															...provided.draggableProps.style,
-															opacity: snapshot.isDragging ? "0.3" : "1"
-														}}>
-														<Card priority={priority} title={tasks.title} />
-													</div>
-												)}
-											</Draggable>
-										);
-									})}
-									{provided.placeholder}
+				{data.map(section => {
+					const id = section.id;
+					return (
+						<Droppable key={section.id} droppableId={section.id}>
+							{provided => (
+								<div
+									className={id != 4 ? "trello-section" : "done-section"}
+									ref={provided.innerRef}
+									{...provided.droppableProps}>
+									<div
+										className={
+											id != 4 ? "trello-section-title" : "done-top-section-title"
+										}>
+										{section.title}
+									</div>
+									<div className='trello-section-content'>
+										{section.tasks.map((tasks, index) => {
+											const priority = tasks.priority;
+											return (
+												<Draggable
+													draggableId={tasks.id}
+													index={index}
+													key={tasks.id}>
+													{(provided, snapshot) => (
+														<div
+															ref={provided.innerRef}
+															{...provided.draggableProps}
+															{...provided.dragHandleProps}
+															style={{
+																...provided.draggableProps.style,
+																opacity: snapshot.isDragging ? "0.3" : "1"
+															}}>
+															<Card priority={priority} title={tasks.title} />
+														</div>
+													)}
+												</Draggable>
+											);
+										})}
+										<div className={id != 4 ? "" : "done-botomm-section-title"}>
+										</div>
+
+										{provided.placeholder}
+									</div>
 								</div>
-							</div>
-						)}
-					</Droppable>
-				))}
+							)}
+						</Droppable>
+					);
+				})}
 			</div>
 		</DragDropContext>
 	);

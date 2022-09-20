@@ -25,21 +25,57 @@ body {
 .trello-section {
   width: 400px;
   /* border: 1px solid white; */
-  background: rgb(30, 25, 31);
-  background: linear-gradient(
-    126deg,
-    rgba(30, 25, 31, 1) 0%,
-    rgba(51, 45, 54, 1) 96%
-  );
+  background: rgb(255,239,240);
   padding: 10px;
   border-radius: 10px;
   margin-left: 10px;
 }
 
+
+.done-section {
+  width: 400px;
+  /* border: 1px solid white; */
+  background-color:transparent;
+  padding: 0 10px 10px 10px ;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
 .trello-section-title {
+  text-align:  center; 
+  color: black;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 50;
   margin: 10px 0 20px;
+}
+
+
+.done-top-section-title {
+  color: black;
+  padding-top: 13px;
+  height: 60px;
+  font-size: 1.2rem;
+  font-weight: 30;
+  margin: 0 0 0;
+  text-align:  center; 
+  border: 1px solid rgb(112,112,112);
+  border-top-left-radius: 70px;
+  border-top-right-radius: 70px;
+  background-color: rgb(209,163,36);
+}
+
+.done-botomm-section-title {
+  color: black;
+  /* padding-top: 13px; */
+  height: 60px;
+  font-size: 1.2rem;
+  font-weight: 30;
+  margin-top: 10px;
+  text-align:  center; 
+  border: 1px solid rgb(112,112,112);
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  background-color: rgb(209,163,36);
 }
 
 .card {

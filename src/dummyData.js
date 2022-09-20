@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 const dummyData = [
 	{
 		id: uuidv4(),
-		title: "今からやること",
+		title: "未着手",
 		tasks: [
 			{
 				id: uuidv4(),
@@ -24,7 +24,7 @@ const dummyData = [
 	},
 	{
 		id: uuidv4(),
-		title: "今後やること",
+		title: "進行中",
 		tasks: [
 			{
 				id: uuidv4(),
@@ -38,8 +38,8 @@ const dummyData = [
 		]
 	},
 	{
-		id: uuidv4(),
-		title: "終わったこと",
+		id: 4,
+		title: "完了",
 		tasks: [
 			{
 				id: uuidv4(),
