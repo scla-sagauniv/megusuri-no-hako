@@ -7,10 +7,8 @@ const Main = () => {
 	//const [状態変数, 状態を変更するための関数] = useState(状態の初期値);
 	const [data, setData] = useState(dummyData);
 
-	//質問１.resultは引数ですか？(中身はdraggableId。Trueつまりresultが存在する場合？)
 	const onDragEnd = result => {
 		console.log(result);
-		//質問２.このif文の処理内容について(予想：result.destinationがfalseだったらreturn?)
 		if (!result.destination) return;
 		const { source, destination } = result;
 
