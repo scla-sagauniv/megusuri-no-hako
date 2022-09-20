@@ -63,12 +63,6 @@ const Main = () => {
 			setData(data);
 		}
 	};
-	const todoNameRef = useRef();
-	const [count, setCount] = useState(0);
-	const handleAddTodo = () => {
-		const name = todoNameRef.current.value;
-		setCount(count + 1);
-	};
 
 	return (
 		<DragDropContext onDragEnd={onDragEnd}>
@@ -80,10 +74,7 @@ const Main = () => {
 								className='trello-section'
 								ref={provided.innerRef}
 								{...provided.droppableProps}>
-								<div className='trello-section-title'>
-									{section.title} <button onClick={handleAddTodo}> + </button>
-								</div>
-								<input type='text' ref={todoNameRef} />
+								<div className='trello-section-title'>{section.title}</div>
 								<div className='trello-section-content'>
 									{section.tasks.map((tasks, index) => (
 										<Draggable
