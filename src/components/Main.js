@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import dummyData from "../dummyData";
-import Card from "./Card";
+import Card from "../components/Card";
 
 const Main = () => {
 	//const [状態変数, 状態を変更するための関数] = useState(状態の初期値);
@@ -76,25 +76,28 @@ const Main = () => {
 								{...provided.droppableProps}>
 								<div className='trello-section-title'>{section.title}</div>
 								<div className='trello-section-content'>
-									{section.tasks.map((tasks, index) => (
-										<Draggable
-											draggableId={tasks.id}
-											index={index}
-											key={tasks.id}>
-											{(provided, snapshot) => (
-												<div
-													ref={provided.innerRef}
-													{...provided.draggableProps}
-													{...provided.dragHandleProps}
-													style={{
-														...provided.draggableProps.style,
-														opacity: snapshot.isDragging ? "0.3" : "1"
-													}}>
-													<Card>{tasks.title}</Card>
-												</div>
-											)}
-										</Draggable>
-									))}
+									{section.tasks.map((tasks, index) => {
+										const priority = tasks.priority;
+										return (
+											<Draggable
+												draggableId={tasks.id}
+												index={index}
+												key={tasks.id}>
+												{(provided, snapshot) => (
+													<div
+														ref={provided.innerRef}
+														{...provided.draggableProps}
+														{...provided.dragHandleProps}
+														style={{
+															...provided.draggableProps.style,
+															opacity: snapshot.isDragging ? "0.3" : "1"
+														}}>
+														<Card priority={priority} title={tasks.title} />
+													</div>
+												)}
+											</Draggable>
+										);
+									})}
 									{provided.placeholder}
 								</div>
 							</div>

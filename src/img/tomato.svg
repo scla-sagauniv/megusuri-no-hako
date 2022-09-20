@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="405" height="103" viewBox="0 0 405 103">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #ef3434;
+      }
+
+      .cls-1 {
+        stroke: #707070;
+      }
+
+      .cls-2 {
+        fill: #cc2929;
+      }
+
+      .cls-4 {
+        fill: #ffb34b;
+      }
+
+      .cls-5 {
+        stroke: none;
+      }
+
+      .cls-6 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="グループ_10" data-name="グループ 10" transform="translate(-197 -692)">
+    <g id="長方形_2" data-name="長方形 2" class="cls-1" transform="translate(197 692)">
+      <rect class="cls-5" width="405" height="103" rx="14"/>
+      <rect class="cls-6" x="0.5" y="0.5" width="404" height="102" rx="13.5"/>
+    </g>
+    <rect id="長方形_39" data-name="長方形 39" class="cls-2" width="389" height="88" rx="14" transform="translate(205 700)"/>
+    <rect id="長方形_40" data-name="長方形 40" class="cls-3" width="356" height="52" rx="14" transform="translate(222 719)"/>
+    <circle id="楕円形_5" data-name="楕円形 5" class="cls-4" cx="5" cy="5" r="5" transform="translate(237 774)"/>
+    <circle id="楕円形_6" data-name="楕円形 6" class="cls-4" cx="5" cy="5" r="5" transform="translate(382 774)"/>
+    <circle id="楕円形_7" data-name="楕円形 7" class="cls-4" cx="5" cy="5" r="5" transform="translate(353 774)"/>
+    <circle id="楕円形_8" data-name="楕円形 8" class="cls-4" cx="5" cy="5" r="5" transform="translate(324 774)"/>
+    <circle id="楕円形_9" data-name="楕円形 9" class="cls-4" cx="5" cy="5" r="5" transform="translate(295 774)"/>
+    <circle id="楕円形_10" data-name="楕円形 10" class="cls-4" cx="5" cy="5" r="5" transform="translate(266 774)"/>
+    <circle id="楕円形_11" data-name="楕円形 11" class="cls-4" cx="5" cy="5" r="5" transform="translate(498 774)"/>
+    <circle id="楕円形_12" data-name="楕円形 12" class="cls-4" cx="5" cy="5" r="5" transform="translate(469 774)"/>
+    <circle id="楕円形_13" data-name="楕円形 13" class="cls-4" cx="5" cy="5" r="5" transform="translate(440 774)"/>
+    <circle id="楕円形_14" data-name="楕円形 14" class="cls-4" cx="5" cy="5" r="5" transform="translate(411 774)"/>
+    <circle id="楕円形_15" data-name="楕円形 15" class="cls-4" cx="5" cy="5" r="5" transform="translate(578 711)"/>
+    <circle id="楕円形_16" data-name="楕円形 16" class="cls-4" cx="5" cy="5" r="5" transform="translate(579 740)"/>
+    <circle id="楕円形_17" data-name="楕円形 17" class="cls-4" cx="5" cy="5" r="5" transform="translate(578 769)"/>
+    <circle id="楕円形_18" data-name="楕円形 18" class="cls-4" cx="5" cy="5" r="5" transform="translate(556 774)"/>
+    <circle id="楕円形_19" data-name="楕円形 19" class="cls-4" cx="5" cy="5" r="5" transform="translate(527 774)"/>
+    <circle id="楕円形_20" data-name="楕円形 20" class="cls-4" cx="5" cy="5" r="5" transform="translate(238 706)"/>
+    <circle id="楕円形_21" data-name="楕円形 21" class="cls-4" cx="5" cy="5" r="5" transform="translate(383 706)"/>
+    <circle id="楕円形_22" data-name="楕円形 22" class="cls-4" cx="5" cy="5" r="5" transform="translate(354 706)"/>
+    <circle id="楕円形_23" data-name="楕円形 23" class="cls-4" cx="5" cy="5" r="5" transform="translate(325 706)"/>
+    <circle id="楕円形_24" data-name="楕円形 24" class="cls-4" cx="5" cy="5" r="5" transform="translate(296 706)"/>
+    <circle id="楕円形_25" data-name="楕円形 25" class="cls-4" cx="5" cy="5" r="5" transform="translate(267 706)"/>
+    <circle id="楕円形_26" data-name="楕円形 26" class="cls-4" cx="5" cy="5" r="5" transform="translate(499 706)"/>
+    <circle id="楕円形_27" data-name="楕円形 27" class="cls-4" cx="5" cy="5" r="5" transform="translate(470 706)"/>
+    <circle id="楕円形_28" data-name="楕円形 28" class="cls-4" cx="5" cy="5" r="5" transform="translate(441 706)"/>
+    <circle id="楕円形_29" data-name="楕円形 29" class="cls-4" cx="5" cy="5" r="5" transform="translate(412 706)"/>
+    <circle id="楕円形_30" data-name="楕円形 30" class="cls-4" cx="5" cy="5" r="5" transform="translate(557 706)"/>
+    <circle id="楕円形_31" data-name="楕円形 31" class="cls-4" cx="5" cy="5" r="5" transform="translate(528 706)"/>
+    <circle id="楕円形_32" data-name="楕円形 32" class="cls-4" cx="5" cy="5" r="5" transform="translate(209 710)"/>
+    <circle id="楕円形_33" data-name="楕円形 33" class="cls-4" cx="5" cy="5" r="5" transform="translate(210 739)"/>
+    <circle id="楕円形_34" data-name="楕円形 34" class="cls-4" cx="5" cy="5" r="5" transform="translate(209 768)"/>
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="405" height="103" viewBox="0 0 405 103">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5f1212;
+        stroke: #707070;
+      }
+
+      .cls-2 {
+        fill: #400c0c;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="グループ_9" data-name="グループ 9" transform="translate(-197 -431)">
+    <g id="長方形_4" data-name="長方形 4" class="cls-1" transform="translate(197 431)">
+      <rect class="cls-3" width="405" height="103" rx="14"/>
+      <rect class="cls-4" x="0.5" y="0.5" width="404" height="102" rx="13.5"/>
+    </g>
+    <rect id="長方形_27" data-name="長方形 27" class="cls-2" width="11" height="10" transform="translate(578 441)"/>
+    <rect id="長方形_28" data-name="長方形 28" class="cls-2" width="7" height="7" transform="translate(540 443)"/>
+    <rect id="長方形_29" data-name="長方形 29" class="cls-2" width="9" height="8" transform="translate(558 442)"/>
+    <rect id="長方形_30" data-name="長方形 30" class="cls-2" width="11" height="10" transform="matrix(-1, -0.017, 0.017, -1, 221.915, 524.764)"/>
+    <rect id="長方形_31" data-name="長方形 31" class="cls-2" width="7" height="7" transform="matrix(-1, -0.017, 0.017, -1, 259.944, 523.427)"/>
+    <rect id="長方形_32" data-name="長方形 32" class="cls-2" width="9" height="8" transform="matrix(-1, -0.017, 0.017, -1, 241.929, 524.113)"/>
+  </g>
+</svg>

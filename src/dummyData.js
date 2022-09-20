@@ -7,15 +7,18 @@ const dummyData = [
 		tasks: [
 			{
 				id: uuidv4(),
-				title: "Reactの勉強"
+				title: "Reactの勉強",
+				priority: 1
 			},
 			{
 				id: uuidv4(),
-				title: "Youtubeで勉強"
+				title: "Youtubeで勉強",
+				priority: 2
 			},
 			{
 				id: uuidv4(),
-				title: "散歩"
+				title: "散歩",
+				priority: 3
 			}
 		]
 	},
@@ -25,7 +28,8 @@ const dummyData = [
 		tasks: [
 			{
 				id: uuidv4(),
-				title: "読書"
+				title: "読書",
+				priority: 4
 			},
 			{
 				id: uuidv4(),

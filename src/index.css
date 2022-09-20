@@ -49,3 +49,37 @@ body {
   border-radius: 10px;
   margin-top: 10px;
 }
+
+.tomato {
+  padding: 30px;
+  background-image: url(img/tomato.svg);
+  background-size: cover;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.lettuce {
+  color:black;
+  padding: 30px;
+  background-image: url(img/retasu.svg);
+  background-size: cover;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.cheese {
+  color:black;
+  padding: 30px;
+  background-image: url(img/cheese.svg);
+  background-size: cover;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.meat {
+  padding: 30px;
+  background-image: url(img/meat.svg);
+  background-size: cover;
+  border-radius: 10px;
+  margin-top: 10px;
+}
