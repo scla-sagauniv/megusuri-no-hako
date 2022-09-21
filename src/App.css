@@ -31,7 +31,7 @@ display: block;
 }
 
 #task_title{
-font-size: 20px;
+font-size: 22px;
 border: none;
 font-weight: bold;
 }
@@ -62,15 +62,30 @@ width: 100%;
 #submit_delete{
   width: 20%;
   float: right;
+  border: none;
+  background-color: white;
+  color: rgb(220,0,12);
+  font-size: 14px;
 }
 
 #submit_change{
   width: 20%;
+  color: white;
+  background-color: red;
+
 }
+
 
 #submit_btn{
   width: 20%;
   float: right;
+  color: white;
+  background-color: red;
+  background-color: rgb(220,0,12);
+   
+  border-radius: 5px;
+  height: 30px;
+  font-size: 14px;
 }
 .close_btn{
   width: 20%;
@@ -87,5 +102,34 @@ color: black;
 display: block;
 }
 
+#modalContent{
+  position: relative;
+}
+.batsu{
+  font-size: 180%;/*ボタンの大きさ*/
+  text-align: center;
+  background-color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  border: 2px solid black;
+  color: black;
+
+
+  position: absolute;
+    right: -27px;
+    top: -27px;
+
+
+
+  border-radius: 100%;
+  width: 54px;
+  height:54px;
+}
+  
+.batsu:hover{
+  background-color:red;
+  border-color: black;
+  color: #FFF;
+}
 
 

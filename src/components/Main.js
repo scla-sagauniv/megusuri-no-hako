@@ -13,13 +13,9 @@ const Main = ({ setShowDeleteModal, selectTaskId }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    console.log('title', testData);
-    // console.log('tasks', testData.tasks);
-  }, [testData]);
-
   const onDragEnd = (result) => {
     //console.log(result);
+
     if (!result.destination) return;
     const { source, destination } = result;
 
@@ -27,12 +23,11 @@ const Main = ({ setShowDeleteModal, selectTaskId }) => {
     if (source.droppableId !== destination.droppableId) {
       //動かし始めたcolmunの配列の番号を取得
       const sourceColIndex = data.findIndex((e) => e.id === source.droppableId);
-      console.log(sourceColIndex);
+
       //動かし終わったcolmunの配列の番号を取得
       const destinationColIndex = data.findIndex(
         (e) => e.id === destination.droppableId,
       );
-      console.log(destinationColIndex);
 
       const sourceCol = data[sourceColIndex];
       const destinationCol = data[destinationColIndex];
@@ -41,7 +36,6 @@ const Main = ({ setShowDeleteModal, selectTaskId }) => {
       //後でsplice関数でその動かし始めたタスクを削除するため
       //sourceTaskに配列をコピーしておく(破壊操作を後でするため)
       const sourceTask = [...sourceCol.tasks];
-      console.log(sourceTask);
 
       //動かし始めたタスクに所属していたカラムの中のタスクをすべて取得
       //後でsplice関数でその動かし始めたタスクを追加するため
@@ -61,9 +55,9 @@ const Main = ({ setShowDeleteModal, selectTaskId }) => {
       //同じカラム内でのタスクの入れかえ
       const sourceColIndex = data.findIndex((e) => e.id === source.droppableId);
       const sourceCol = data[sourceColIndex];
-      console.log(sourceCol);
+
       const sourceTask = [...sourceCol.tasks];
-      console.log(sourceTask);
+
       const [removed] = sourceTask.splice(source.index, 1);
       sourceTask.splice(destination.index, 0, removed);
 
@@ -72,6 +66,9 @@ const Main = ({ setShowDeleteModal, selectTaskId }) => {
       setData(data);
     }
   };
+
+  //データが存在しない時はフォームを表示しない（空タグを表示）
+  if (!data) return <></>;
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>

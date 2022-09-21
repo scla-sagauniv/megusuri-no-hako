@@ -45,12 +45,17 @@ const DeleteModal = (props) => {
                   type='text'
                   defaultValue={props.task.title}
                   {...register('title')}
+                  required
                 />
               </div>
 
               <div className='setting_box'>
                 <label className='settings_label'>優先度</label>
-                <select id='task_priority' {...register('task_priority')}>
+                <select
+                  id='task_priority'
+                  {...register('task_priority')}
+                  required
+                >
                   <option value='最重要'>最重要</option>
                   <option value='重要'>重要</option>
                   <option value='中'>中</option>
@@ -63,6 +68,7 @@ const DeleteModal = (props) => {
                   id='task_deadline'
                   type='date'
                   {...register('task_deadline')}
+                  required
                 />
               </div>
               <div className='setting_box'>
