@@ -7,6 +7,7 @@ const Main = () => {
   //const [状態変数, 状態を変更するための関数] = useState(状態の初期値);
   const [data, setData] = useState(dummyData);
 
+
   const onDragEnd = (result) => {
     console.log(result);
     if (!result.destination) return;
@@ -103,7 +104,7 @@ const Main = () => {
                                 opacity: snapshot.isDragging ? '0.3' : '1',
                               }}
                             >
-                              <Card priority={priority} title={tasks.title} />
+                              <Card priority={priority} title={tasks.title}/>
                             </div>
                           )}
                         </Draggable>
