@@ -1,8 +1,10 @@
 import React from 'react';
-const Card = ({ priority, title }) => {
-  const handleClick = (e) => {
-    //モーダルを起動する処理
-    console.log(e);
+
+const Card = ({ id, priority, title, handleClick, selectTask }) => {
+  const onClick = () => {
+    //console.debug(handleClick);
+    handleClick();
+    selectTask(id);
   };
 
   return (
@@ -16,7 +18,7 @@ const Card = ({ priority, title }) => {
           ? 'food cheese'
           : 'food lettuce'
       }
-      onClick={handleClick}
+      onClick={onClick}
     >
       {title}
     </div>

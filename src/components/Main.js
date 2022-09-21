@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import dummyData from '../dummyData';
 import Card from '../components/Card';
 import { useFireStore } from '../hooks/useFireStore';
 
-const Main = () => {
+const Main = ({ setShowDeleteModal, selectTaskId }) => {
   //const [状態変数, 状態を変更するための関数] = useState(状態の初期値);
-  const [data, setData] = useState(dummyData);
+  const [data, setData] = useState();
   const { getFireStoreList, data: testData } = useFireStore();
 
   useEffect(() => {
@@ -20,7 +19,7 @@ const Main = () => {
   }, [testData]);
 
   const onDragEnd = (result) => {
-    console.log(result);
+    //console.log(result);
     if (!result.destination) return;
     const { source, destination } = result;
 
@@ -115,7 +114,13 @@ const Main = () => {
                                 opacity: snapshot.isDragging ? '0.3' : '1',
                               }}
                             >
-                              <Card priority={priority} title={tasks.title} />
+                              <Card
+                                id={tasks.id}
+                                priority={priority}
+                                title={tasks.title}
+                                handleClick={setShowDeleteModal}
+                                selectTask={selectTaskId}
+                              />
                             </div>
                           )}
                         </Draggable>
