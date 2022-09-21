@@ -1,22 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="405" height="104" viewBox="0 0 405 104">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #abd659;
-        stroke: #707070;
-      }
-
-      .cls-2 {
-        stroke: none;
-      }
-
-      .cls-3 {
-        fill: none;
-      }
-    </style>
-  </defs>
-  <g id="長方形_3" data-name="長方形 3" class="cls-1">
-    <rect class="cls-2" width="405" height="104" rx="14"/>
-    <rect class="cls-3" x="0.5" y="0.5" width="404" height="103" rx="13.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="100" viewBox="0 0 400 100">
+  <g id="長方形_1" data-name="長方形 1" fill="#abd659" stroke="#707070" stroke-width="1">
+    <rect width="400" height="100" rx="14" stroke="none"/>
+    <rect x="0.5" y="0.5" width="399" height="99" rx="13.5" fill="none"/>
   </g>
 </svg>

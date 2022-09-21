@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Card = ({ priority, title }) => {
   const handleClick = (e) => {
     //モーダルを起動する処理
