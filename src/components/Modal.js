@@ -6,6 +6,7 @@ const Modal = (props) => {
   //データベースに保存する処理を記述
   const closeModal = () => {
     props.setShowModal(false);
+    reset();
   };
 
   const { register, handleSubmit, reset } = useForm();
@@ -13,7 +14,6 @@ const Modal = (props) => {
   const onSubmit = (data) => {
     console.log(data);
     closeModal();
-    reset();
   };
 
   return (

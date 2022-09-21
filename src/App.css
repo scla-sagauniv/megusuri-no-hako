@@ -105,6 +105,16 @@ display: block;
 #modalContent{
   position: relative;
 }
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px white inset;
+}
+
+:focus {
+  outline: none;
+
+}
+
 .batsu{
   font-size: 180%;/*ボタンの大きさ*/
   text-align: center;

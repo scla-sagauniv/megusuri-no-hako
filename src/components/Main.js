@@ -14,8 +14,9 @@ const Main = ({ setShowDeleteModal, selectTaskId }) => {
   }, []);
 
   const onDragEnd = (result) => {
-    //console.log(result);
+    console.log(result);
 
+    //行き先が不明な場合終了する
     if (!result.destination) return;
     const { source, destination } = result;
 

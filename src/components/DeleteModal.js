@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 const DeleteModal = (props) => {
   const closeDeleteModal = () => {
     props.close();
+    reset();
   };
 
   const deleteTask = () => {
@@ -16,7 +17,6 @@ const DeleteModal = (props) => {
   const onSubmit = (data) => {
     console.log(data); //本来はデータを追加するコード
     closeDeleteModal();
-    reset();
   };
 
   return (
@@ -26,12 +26,9 @@ const DeleteModal = (props) => {
 
         <div id='overlay'>
           <div id='modalContent'>
-            <input
-              className='close_btn'
-              type='submit'
-              value='閉じる'
-              onClick={closeDeleteModal}
-            />
+            <div class='batsu' onClick={closeDeleteModal}>
+              ×
+            </div>
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
                 id='task_uuid'
