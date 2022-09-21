@@ -5,6 +5,8 @@ import Modal from '../components/Modal';
 import { useNavigate, Navigate } from 'react-router-dom';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from '../FirebaseConfig';
+import '../css/Home.css';
+import pic from '../img/MacIcon_mos.png';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -37,13 +39,21 @@ const Home = () => {
           {!user ? (
             <Navigate to={`/login/`} />
           ) : (
-            <div style={{ padding: '50px' }}>
-              <h1 style={{ merginBottom: '20px' }}>タスク管理アプリ</h1>
-              <button id='task_add_btn' onClick={showModal}>
-                タスク追加
-              </button>
-              <p>{user?.email}</p>
-              <button onClick={logout}>ログアウト</button>
+            <div>
+              <div className='header'>
+                <div className='left'>
+                <img src={pic} width={"70"} height={"100"} alt='MacIcon_Mos'/>
+              <h1 className='apptitle'>タスク管理アプリ</h1>
+              {/* <button className='task_add_btn' onClick={showModal}>
+                <img src={pulsImg}/>
+              </button> */}
+              <input type="button" className='task_add_button'  onClick={showModal}/>
+              </div>
+              <div className='right'>
+              <p className='user'>{user?.email}</p>
+              <button className='logout' onClick={logout}>ログアウト</button>
+              </div>
+              </div>
               <Main />
               <Modal showFlag={modal} setShowModal={setShowModal} />
             </div>
