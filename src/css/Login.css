@@ -1,6 +1,12 @@
 .container {
     text-align: center;
-    margin-top: 30px;
+    display: flex;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 
@@ -48,6 +54,10 @@
     width: 80px;
     height: 35px;
     font-size: 14px;
+}
+
+.login-button:hover {
+    background-color: rgb(255, 0, 47);
 }
 
 .register-button{

@@ -50,3 +50,7 @@
     height: 35px;
     font-size: 14px;
 }
+
+.register:hover {
+    background-color: rgb(255, 0, 47);
+}
