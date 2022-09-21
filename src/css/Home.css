@@ -1,0 +1,52 @@
+.header{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+
+}
+
+
+.logout{
+    background-color: rgb(70,92,29);
+    border-radius: 5px;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.task_add_button{ 
+    border: 0px;
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/addButton.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+} 
+
+.apptitle{
+    margin-right: 15px;
+    font-size: 30px;
+    font-weight: 800px;
+    color: white;
+}
+
+.logout{
+    padding: 5px 8px;
+    color: white;
+}
+
+.user{
+    color: white;
+}

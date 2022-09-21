@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import Card from '../components/Card';
+import { useFireStore } from '../hooks/useFireStore';
 
-const Main = ({ setShowDeleteModal, selectTaskId, data, setData }) => {
+const Main = () => {
+  //const [状態変数, 状態を変更するための関数] = useState(状態の初期値);
+  const [data, setData] = useState(dummyData);
+  const { getFireStoreList, data: testData } = useFireStore();
+
+  useEffect(() => {
+    getFireStoreList();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    console.log('title', testData);
+    // console.log('tasks', testData.tasks);
+  }, [testData]);
+
   const onDragEnd = (result) => {
     //console.log(result);
     if (!result.destination) return;

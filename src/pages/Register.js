@@ -63,7 +63,7 @@ const Register = () => {
                 onChange={(e) => setRegisterPassword(e.target.value)}
               />
             </div>
-            <button>登録する</button>
+            <button>登録</button>
           </form>
         </>
       )}
