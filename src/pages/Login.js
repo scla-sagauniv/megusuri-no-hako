@@ -4,7 +4,7 @@ import { signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../FirebaseConfig.js';
 import { useNavigate, Navigate } from 'react-router-dom';
 /* Login.js */
-import '../components/Login.css';
+import '../css/Login.css';
 import pic from '../img/loginmac.png';
 
 const Login = () => {
