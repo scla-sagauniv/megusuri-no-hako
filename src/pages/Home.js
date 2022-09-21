@@ -2,6 +2,7 @@ import '../App.css';
 import React, { useState, useEffect } from 'react';
 import Main from '../components/Main';
 import Modal from '../components/Modal';
+import DeleteModal from '../components/DeleteModal';
 import { useNavigate, Navigate } from 'react-router-dom';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from '../FirebaseConfig';
@@ -11,9 +12,15 @@ const Home = () => {
   const [user, setUser] = useState('');
   const [loading, setLoading] = useState(true);
   const [modal, setShowModal] = useState(false);
+  const [deletemodal, setShowDeleteModal] = useState(false);
 
   const showModal = () => {
     setShowModal(true);
+  };
+
+  const showDeleteModal = (id) => {
+    setShowDeleteModal(true);
+    console.log(id);
   };
 
   /* ↓ログインしているかどうかを判定する */
@@ -44,10 +51,15 @@ const Home = () => {
               <button id='task_add_btn' onClick={showModal}>
                 タスク追加
               </button>
+
               <p>{user?.email}</p>
               <button onClick={logout}>ログアウト</button>
-              <Main />
+              <Main setShowDeleteModal={setShowDeleteModal} />
               <Modal showFlag={modal} setShowModal={setShowModal} />
+              <DeleteModal
+                showFlag={deletemodal}
+                setShowDeleteModal={setShowDeleteModal}
+              />
             </div>
           )}
         </>
