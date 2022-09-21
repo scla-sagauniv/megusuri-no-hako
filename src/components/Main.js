@@ -149,7 +149,7 @@ const Main = ({ setShowDeleteModal, selectTaskId }) => {
           </div>
         </DragDropContext>
       ) : (
-        <div>データないよ</div>
+        <h1>処理中</h1>
       )}
     </>
   );
