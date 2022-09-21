@@ -1,12 +1,11 @@
-import React from "react";
+
 import { useForm } from "react-hook-form";
 
 
 
-const Modal = (props) => {
-    //データベースに保存する処理を記述
-    const closeModal = () => {
-        props.setShowModal(false);
+const DeleteModal = (props) => {
+    const closeDeleteModal = () => {
+        props.setShowDeleteModal(false);
       };
 
       const {
@@ -16,7 +15,7 @@ const Modal = (props) => {
     
       const onSubmit = (data) => {
         console.log(data);
-        closeModal()
+        closeDeleteModal()
         reset()
       }
 
@@ -50,11 +49,12 @@ const Modal = (props) => {
                     <input id="task_description" type="text" {...register("task_description")}/>
                 </div>
               <input id="submit_btn" type="submit"/>
+
+
         </form>
 
           </div>
         </div>
-        
         
        
         
@@ -67,4 +67,4 @@ const Modal = (props) => {
   )
 };
 
-export default Modal;
+export default DeleteModal;
