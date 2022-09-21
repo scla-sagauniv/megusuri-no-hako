@@ -5,15 +5,13 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path={`/register/`} element={<Register />} />
-          <Route path={`/login/`} element={<Login />} />
-          <Route path={`/`} element={<Home />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path={`/register/`} element={<Register />} />
+        <Route path={`/login/`} element={<Login />} />
+        <Route path={`/`} element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

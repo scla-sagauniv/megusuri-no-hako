@@ -41,7 +41,7 @@ const Login = () => {
       ) : (
         <>
           <div className='container'>
-            <img src={pic} width={'250'} height={'250'} alt='macIcon' />
+            <img src={pic} width={"300"} height={"250"} alt='macIcon'/>
             <h1 className='login-page'>ログインページ</h1>
             <form className='infobox' onSubmit={handleSubmit}>
               <div className='input'>

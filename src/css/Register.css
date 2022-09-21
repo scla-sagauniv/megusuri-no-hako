@@ -1,16 +1,10 @@
 .container {
     text-align: center;
-    display: flex;
-    height: 100vh;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-
+    margin-top: 30px;
 }
 
 
-.login-page{
+.register-page{
     color: white;
     height: 60px;
     line-height: 60px;
@@ -25,7 +19,8 @@
     padding: 40px 100px;
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
+    align-items: center;
+    /* justify-content: space-between;  */
 }
 
 .input {
@@ -47,7 +42,7 @@
     
 }
 
-.login-button{
+.register{
     background-color: rgb(220,0,12);
     color: white;
     border-radius: 5px;
@@ -56,13 +51,6 @@
     font-size: 14px;
 }
 
-.login-button:hover {
+.register:hover {
     background-color: rgb(255, 0, 47);
-}
-
-.register-button{
-    border: none;
-    background-color: white;
-    color: rgb(220,0,12);
-    font-size: 16px;
 }
