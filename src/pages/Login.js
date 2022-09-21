@@ -25,9 +25,10 @@ const Login = () => {
 
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
+      console.debug('currentUser: ', currentUser);
       setUser(currentUser);
     });
-  });
+  }, []);
 
   return (
     <>
