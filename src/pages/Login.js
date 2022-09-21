@@ -41,38 +41,42 @@ const Login = () => {
       ) : (
         <>
           <div className='container'>
-            <img src={pic} width={"250"} height={"250"} alt='macIcon'/>
+            <img src={pic} width={"300"} height={"250"} alt='macIcon'/>
             <h1 className='login-page'>ログインページ</h1>
             <form className='infobox' onSubmit={handleSubmit}>
               <div className='input'>
                 <label className='email-label'>メールアドレス</label>
                 <input
-                      name='email'
-                      type='email'
-                      value={loginEmail}
-                      onChange={(e) => setLoginEmail(e.target.value)}
-                    />
+                  name='email'
+                  type='email'
+                  value={loginEmail}
+                  onChange={(e) => setLoginEmail(e.target.value)}
+                />
               </div>
               <div className='input'>
                 <label className='password-label'>パスワード</label>
                 <input
-                      name='password'
-                      type='password'
-                      value={loginPassword}
-                      onChange={(e) => setLoginPassword(e.target.value)}
-                    />
+                  name='password'
+                  type='password'
+                  value={loginPassword}
+                  onChange={(e) => setLoginPassword(e.target.value)}
+                />
               </div>
               <div className='input'>
                 <button className='login-button'>ログイン</button>
-                <button className='register-button' onClick={() => navigate('/register/')}>新規登録</button>
+                <button
+                  className='register-button'
+                  onClick={() => navigate('/register/')}
+                >
+                  新規登録
+                </button>
               </div>
             </form>
           </div>
         </>
-        )
-      }
+      )}
     </>
-  )
-}
+  );
+};
 
 export default Login;

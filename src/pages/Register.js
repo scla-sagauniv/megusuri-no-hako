@@ -4,8 +4,10 @@ import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
 } from 'firebase/auth';
-import { auth } from '../FirebaseConfig';
+import { auth } from '../FirebaseConfig.js';
 import { Navigate } from 'react-router-dom';
+import '../css/Register.css';
+import pic from '../img/loginmac.png';
 
 const Register = () => {
   /* ↓state変数を定義 */
@@ -41,10 +43,12 @@ const Register = () => {
         <Navigate to={`/`} />
       ) : (
         <>
-          <h1>新規登録</h1>
-          <form onSubmit={handleSubmit}>
-            <div>
-              <label>メールアドレス</label>
+        <div className='container'>
+        <img src={pic} width={"300"} height={"250"} alt='macIcon'/>
+          <h1 className='register-page'>新規登録</h1>
+          <form className='infobox' onSubmit={handleSubmit}>
+            <div className='input'>
+              <label className='email-label'>メールアドレス</label>
               {/* ↓「value」と「onChange」を追加 */}
               <input
                 name='email'
@@ -53,9 +57,8 @@ const Register = () => {
                 onChange={(e) => setRegisterEmail(e.target.value)}
               />
             </div>
-            <div>
-              <label>パスワード</label>
-              {/* ↓「value」と「onChange」を追加 */}
+            <div className='input'>
+              <label className='password-label'>パスワード</label>
               <input
                 name='password'
                 type='password'
@@ -63,8 +66,9 @@ const Register = () => {
                 onChange={(e) => setRegisterPassword(e.target.value)}
               />
             </div>
-            <button>登録</button>
+            <button className='register'> 登録</button>
           </form>
+          </div>
         </>
       )}
     </>

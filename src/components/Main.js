@@ -13,6 +13,17 @@ const Main = ({ setShowDeleteModal, selectTaskId }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    console.log('title', testData);
+    setData(testData);
+    // console.log('tasks', testData.tasks);
+  }, [testData]);
+
+  useEffect(() => {
+    // firestoreのデータが入ったことを確認
+    console.log('firestore', data);
+  }, [data]);
+
   const onDragEnd = (result) => {
     console.log(result);
 
@@ -72,71 +83,78 @@ const Main = ({ setShowDeleteModal, selectTaskId }) => {
   if (!data) return <></>;
 
   return (
-    <DragDropContext onDragEnd={onDragEnd}>
-      <div className='trello'>
-        {data.map((section) => {
-          const id = section.id;
-          return (
-            <Droppable key={section.id} droppableId={section.id}>
-              {(provided) => (
-                <div
-                  className={id !== 4 ? 'trello-section' : 'done-section'}
-                  ref={provided.innerRef}
-                  {...provided.droppableProps}
-                >
-                  <div
-                    className={
-                      id !== 4
-                        ? 'trello-section-title'
-                        : 'done-top-section-title'
-                    }
-                  >
-                    {section.title}
-                  </div>
-                  <div className='trello-section-content'>
-                    {section.tasks.map((tasks, index) => {
-                      const priority = tasks.priority;
-                      return (
-                        <Draggable
-                          draggableId={tasks.id}
-                          index={index}
-                          key={tasks.id}
-                        >
-                          {(provided, snapshot) => (
-                            <div
-                              ref={provided.innerRef}
-                              {...provided.draggableProps}
-                              {...provided.dragHandleProps}
-                              style={{
-                                ...provided.draggableProps.style,
-                                opacity: snapshot.isDragging ? '0.3' : '1',
-                              }}
-                            >
-                              <Card
-                                id={tasks.id}
-                                priority={priority}
-                                title={tasks.title}
-                                handleClick={setShowDeleteModal}
-                                selectTask={selectTaskId}
-                              />
-                            </div>
-                          )}
-                        </Draggable>
-                      );
-                    })}
+    <>
+      {data ? (
+        <DragDropContext onDragEnd={onDragEnd}>
+          <div className='trello'>
+            {data.map((section) => {
+              const id = section.id;
+              return (
+                <Droppable key={section.id} droppableId={section.id}>
+                  {(provided) => (
                     <div
-                      className={id !== 4 ? '' : 'done-botomm-section-title'}
-                    ></div>
-
-                    {provided.placeholder}
-                  </div>
-                </div>
-              )}
-            </Droppable>
-          );
-        })}
-      </div>
-    </DragDropContext>
+                      className={id !== 4 ? 'trello-section' : 'done-section'}
+                      ref={provided.innerRef}
+                      {...provided.droppableProps}
+                    >
+                      <div
+                        className={
+                          id !== 4
+                            ? 'trello-section-title'
+                            : 'done-top-section-title'
+                        }
+                      >
+                        {section.title}
+                      </div>
+                      <div className='trello-section-content'>
+                        {section.tasks.map((tasks, index) => {
+                          const priority = tasks.priority;
+                          return (
+                            <Draggable
+                              draggableId={tasks.id}
+                              index={index}
+                              key={tasks.id}
+                            >
+                              {(provided, snapshot) => (
+                                <div
+                                  ref={provided.innerRef}
+                                  {...provided.draggableProps}
+                                  {...provided.dragHandleProps}
+                                  style={{
+                                    ...provided.draggableProps.style,
+                                    opacity: snapshot.isDragging ? '0.3' : '1',
+                                  }}
+                                >
+                                  <Card
+                                    id={tasks.id}
+                                    priority={priority}
+                                    title={tasks.title}
+                                    handleClick={setShowDeleteModal}
+                                    selectTask={selectTaskId}
+                                  />
+                                </div>
+                              )}
+                            </Draggable>
+                          );
+                        })}
+                        <div
+                          className={
+                            id !== 4 ? '' : 'done-botomm-section-title'
+                          }
+                        ></div>
+                        {provided.placeholder}
+                      </div>
+                    </div>
+                  )}
+                </Droppable>
+              );
+            })}
+          </div>
+        </DragDropContext>
+      ) : (
+        <h1>処理中</h1>
+      )}
+    </>
   );
 };
 
