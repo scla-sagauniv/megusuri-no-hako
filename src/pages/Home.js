@@ -18,7 +18,7 @@ const Home = () => {
   const [selectedTaskId, selectTaskId] = useState();
 
   //const [状態変数, 状態を変更するための関数] = useState(状態の初期値);
-  const [data, setData] = useState(dummyData);
+  const [data, setData] = useState();
 
   const showModal = () => {
     setShowModal(true);

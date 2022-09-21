@@ -3,9 +3,9 @@ import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import Card from '../components/Card';
 import { useFireStore } from '../hooks/useFireStore';
 
-const Main = () => {
+const Main = ({ setShowDeleteModal, selectTaskId }) => {
   //const [状態変数, 状態を変更するための関数] = useState(状態の初期値);
-  const [data, setData] = useState(dummyData);
+  const [data, setData] = useState();
   const { getFireStoreList, data: testData } = useFireStore();
 
   useEffect(() => {
