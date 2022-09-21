@@ -1,7 +1,7 @@
 /* useStateをimport↓ */
 import React, { useState, useEffect } from 'react';
 import { signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
-import auth from '../FirebaseConfig.js';
+import { auth } from '../FirebaseConfig.js';
 import { useNavigate, Navigate } from 'react-router-dom';
 /* Login.js */
 import '../css/Login.css';
