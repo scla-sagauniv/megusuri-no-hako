@@ -12,6 +12,10 @@
     border-radius: 5px;
 }
 
+.logout:hover{
+    background-color: rgb(88, 118, 34);
+}
+
 .left{
     display: flex;
     align-items: center;
