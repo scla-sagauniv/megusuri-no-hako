@@ -67,6 +67,7 @@ const Home = () => {
     if (done.tasks.filter((task) => task.id === selectedTaskId)[0]) {
       return done.tasks.filter((task) => task.id === selectedTaskId)[0];
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedTaskId]);
 
   return (

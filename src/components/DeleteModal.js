@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react';
 import { useForm } from 'react-hook-form';
 
 const DeleteModal = (props) => {
