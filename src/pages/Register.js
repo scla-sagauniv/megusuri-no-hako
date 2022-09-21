@@ -4,7 +4,7 @@ import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
 } from 'firebase/auth';
-import { auth } from '../FirebaseConfig';
+import auth from '../FirebaseConfig';
 import { Navigate } from 'react-router-dom';
 
 const Register = () => {
