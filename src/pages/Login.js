@@ -1,8 +1,12 @@
 /* useStateをimport↓ */
 import React, { useState, useEffect } from 'react';
-import { signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
+import {
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
+} from 'firebase/auth';
 import { auth } from '../FirebaseConfig.js';
-import { Navigate } from 'react-router-dom';
+import { useNavigate, Navigate } from 'react-router-dom';
 
 const Login = () => {
   /* ↓state変数を定義 */
@@ -22,6 +26,7 @@ const Login = () => {
 
   /* ↓ログインを判定する設定 */
   const [user, setUser] = useState();
+  const navigate = useNavigate();
 
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
@@ -61,6 +66,7 @@ const Login = () => {
             </div>
             <button>ログイン</button>
           </form>
+          <button onClick={() => navigate('/register/')}>新規登録</button>
         </>
       )}
     </>

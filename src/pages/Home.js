@@ -31,8 +31,6 @@ const Home = () => {
             <Navigate to={`/login/`} />
           ) : (
             <div style={{ padding: '50px' }}>
-              <button onClick={() => navigate('/login')}>ログイン</button>
-              <button onClick={() => navigate('/register')}>新規登録</button>
               <h1 style={{ merginBottom: '20px' }}>タスク管理アプリ</h1>
               <p>{user?.email}</p>
               <button onClick={logout}>ログアウト</button>
