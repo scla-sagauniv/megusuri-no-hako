@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import dummyData from '../dummyData';
 import Card from '../components/Card';
-import Modal from "../components/Modal";
 
 const Main = () => {
   //const [状態変数, 状態を変更するための関数] = useState(状態の初期値);
