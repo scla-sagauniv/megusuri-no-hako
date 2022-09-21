@@ -5,7 +5,6 @@ import { db } from '../FirebaseConfig.js';
 export const useFireStore = () => {
   const [data, setData] = useState();
 
-
   const getFireStoreList = async () => {
     try {
       const snapshot = await getDocs(collection(db, 'tomaTrelloUserId'));
