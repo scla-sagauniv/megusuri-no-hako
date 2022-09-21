@@ -7,7 +7,6 @@ import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from '../FirebaseConfig';
 import '../css/Home.css';
 import pic from '../img/MacIcon_mos.png';
-import pulsImg from '../img/addButton.png';
 
 const Home = () => {
   const navigate = useNavigate();
