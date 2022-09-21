@@ -1,71 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="405" height="103" viewBox="0 0 405 103">
-  <defs>
-    <style>
-      .cls-1, .cls-3 {
-        fill: #c92929;
-      }
-
-      .cls-2 {
-        fill: #961818;
-      }
-
-      .cls-4 {
-        fill: #ffb34b;
-      }
-
-      .cls-5 {
-        fill: #1a772a;
-        stroke: #707070;
-        opacity: 0.564;
-      }
-
-      .cls-6, .cls-7 {
-        stroke: none;
-      }
-
-      .cls-7 {
-        fill: #707070;
-      }
-    </style>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="100" viewBox="0 0 400 100">
   <g id="グループ_16" data-name="グループ 16" transform="translate(-486 -1450)">
-    <g id="パス_11" data-name="パス 11" class="cls-1" transform="translate(486 1450)">
-      <path class="cls-6" d="M 391 102.5 L 14 102.5 C 10.39400005340576 102.5 7.003849983215332 101.0957489013672 4.454050064086914 98.54595184326172 C 1.904250025749207 95.99614715576172 0.5 92.60600280761719 0.5 89 L 0.5 14 C 0.5 10.39400005340576 1.904250025749207 7.003849983215332 4.454050064086914 4.454050064086914 C 7.003849983215332 1.904250025749207 10.39400005340576 0.5 14 0.5 L 391 0.5 C 394.6059875488281 0.5 397.9961547851562 1.904250025749207 400.5459594726562 4.454050064086914 C 403.0957641601562 7.003849983215332 404.5 10.39400005340576 404.5 14 L 404.5 89 C 404.5 92.60600280761719 403.0957641601562 95.99614715576172 400.5459594726562 98.54595184326172 C 397.9961547851562 101.0957489013672 394.6059875488281 102.5 391 102.5 Z"/>
-      <path class="cls-7" d="M 14 1 C 10.52755737304688 1 7.26300048828125 2.352249145507812 4.807586669921875 4.807601928710938 C 2.352264404296875 7.26300048828125 1 10.52754974365234 1 14 L 1 89 C 1 92.47245025634766 2.352264404296875 95.73699951171875 4.807586669921875 98.19239807128906 C 7.26300048828125 100.6477508544922 10.52755737304688 102 14 102 L 391 102 C 394.4724426269531 102 397.7369995117188 100.6477508544922 400.1924133300781 98.19239807128906 C 402.6477355957031 95.73699951171875 404 92.47245025634766 404 89 L 404 14 C 404 10.52754974365234 402.6477355957031 7.26300048828125 400.1924133300781 4.807601928710938 C 397.7369995117188 2.352249145507812 394.4724426269531 1 391 1 L 14 1 M 14 0 L 391 0 C 398.7319946289062 0 405 6.267997741699219 405 14 L 405 89 C 405 96.73200225830078 398.7319946289062 103 391 103 L 14 103 C 6.26800537109375 103 0 96.73200225830078 0 89 L 0 14 C 0 6.267997741699219 6.26800537109375 0 14 0 Z"/>
+    <g id="パス_11" data-name="パス 11" transform="translate(486 1450)" fill="#c92929">
+      <path d="M 386.1728515625 99.5 L 13.82715034484863 99.5 C 10.26574993133545 99.5 6.917900085449219 98.13710021972656 4.400400161743164 95.662353515625 C 1.885200023651123 93.18990325927734 0.5 89.9031982421875 0.5 86.40775299072266 L 0.5 13.59224987030029 C 0.5 10.09679985046387 1.885200023651123 6.810100078582764 4.400400161743164 4.337649822235107 C 6.917900085449219 1.862900018692017 10.26574993133545 0.5 13.82715034484863 0.5 L 386.1728515625 0.5 C 389.7343139648438 0.5 393.0820922851562 1.862900018692017 395.599609375 4.337649822235107 C 398.1148071289062 6.810100078582764 399.5 10.09679985046387 399.5 13.59224987030029 L 399.5 86.40775299072266 C 399.5 89.9031982421875 398.1148071289062 93.18990325927734 395.599609375 95.662353515625 C 393.0820922851562 98.13710021972656 389.7343139648438 99.5 386.1728515625 99.5 Z" stroke="none"/>
+      <path d="M 13.8271484375 1 C 10.39764404296875 1 7.174346923828125 2.31195068359375 4.750885009765625 4.694198608398438 C 2.33209228515625 7.071952819824219 1 10.23200225830078 1 13.59224700927734 L 1 86.40775299072266 C 1 89.76799774169922 2.33209228515625 92.92804718017578 4.750885009765625 95.30580139160156 C 7.174346923828125 97.68804931640625 10.39764404296875 99 13.8271484375 99 L 386.1728515625 99 C 389.6023559570312 99 392.8257141113281 97.68804931640625 395.2491149902344 95.30580139160156 C 397.6679077148438 92.9281005859375 399 89.76805114746094 399 86.40775299072266 L 399 13.59224700927734 C 399 10.23194885253906 397.6679077148438 7.0718994140625 395.2491149902344 4.694198608398438 C 392.8257141113281 2.31195068359375 389.6023559570312 1 386.1728515625 1 L 13.8271484375 1 M 13.8271484375 0 L 386.1728515625 0 C 393.8093872070312 0 400 6.08544921875 400 13.59224700927734 L 400 86.40775299072266 C 400 93.91455078125 393.8093872070312 100 386.1728515625 100 L 13.8271484375 100 C 6.190643310546875 100 0 93.91455078125 0 86.40775299072266 L 0 13.59224700927734 C 0 6.08544921875 6.190643310546875 0 13.8271484375 0 Z" stroke="none" fill="#707070"/>
     </g>
-    <rect id="長方形_39" data-name="長方形 39" class="cls-2" width="389" height="88" rx="14" transform="translate(493 1457)"/>
-    <rect id="長方形_40" data-name="長方形 40" class="cls-3" width="356" height="52" rx="14" transform="translate(510 1476)"/>
-    <circle id="楕円形_5" data-name="楕円形 5" class="cls-4" cx="5" cy="5" r="5" transform="translate(525 1531)"/>
-    <circle id="楕円形_6" data-name="楕円形 6" class="cls-4" cx="5" cy="5" r="5" transform="translate(670 1531)"/>
-    <circle id="楕円形_7" data-name="楕円形 7" class="cls-4" cx="5" cy="5" r="5" transform="translate(641 1531)"/>
-    <circle id="楕円形_8" data-name="楕円形 8" class="cls-4" cx="5" cy="5" r="5" transform="translate(612 1531)"/>
-    <circle id="楕円形_9" data-name="楕円形 9" class="cls-4" cx="5" cy="5" r="5" transform="translate(583 1531)"/>
-    <circle id="楕円形_10" data-name="楕円形 10" class="cls-4" cx="5" cy="5" r="5" transform="translate(554 1531)"/>
-    <circle id="楕円形_11" data-name="楕円形 11" class="cls-4" cx="5" cy="5" r="5" transform="translate(786 1531)"/>
-    <circle id="楕円形_12" data-name="楕円形 12" class="cls-4" cx="5" cy="5" r="5" transform="translate(757 1531)"/>
-    <circle id="楕円形_13" data-name="楕円形 13" class="cls-4" cx="5" cy="5" r="5" transform="translate(728 1531)"/>
-    <circle id="楕円形_14" data-name="楕円形 14" class="cls-4" cx="5" cy="5" r="5" transform="translate(699 1531)"/>
-    <circle id="楕円形_15" data-name="楕円形 15" class="cls-4" cx="5" cy="5" r="5" transform="translate(866 1468)"/>
-    <circle id="楕円形_16" data-name="楕円形 16" class="cls-4" cx="5" cy="5" r="5" transform="translate(867 1497)"/>
-    <circle id="楕円形_17" data-name="楕円形 17" class="cls-4" cx="5" cy="5" r="5" transform="translate(866 1526)"/>
-    <circle id="楕円形_18" data-name="楕円形 18" class="cls-4" cx="5" cy="5" r="5" transform="translate(844 1531)"/>
-    <circle id="楕円形_19" data-name="楕円形 19" class="cls-4" cx="5" cy="5" r="5" transform="translate(815 1531)"/>
-    <circle id="楕円形_20" data-name="楕円形 20" class="cls-4" cx="5" cy="5" r="5" transform="translate(526 1463)"/>
-    <circle id="楕円形_21" data-name="楕円形 21" class="cls-4" cx="5" cy="5" r="5" transform="translate(671 1463)"/>
-    <circle id="楕円形_22" data-name="楕円形 22" class="cls-4" cx="5" cy="5" r="5" transform="translate(642 1463)"/>
-    <circle id="楕円形_23" data-name="楕円形 23" class="cls-4" cx="5" cy="5" r="5" transform="translate(613 1463)"/>
-    <circle id="楕円形_24" data-name="楕円形 24" class="cls-4" cx="5" cy="5" r="5" transform="translate(584 1463)"/>
-    <circle id="楕円形_25" data-name="楕円形 25" class="cls-4" cx="5" cy="5" r="5" transform="translate(555 1463)"/>
-    <circle id="楕円形_26" data-name="楕円形 26" class="cls-4" cx="5" cy="5" r="5" transform="translate(787 1463)"/>
-    <circle id="楕円形_27" data-name="楕円形 27" class="cls-4" cx="5" cy="5" r="5" transform="translate(758 1463)"/>
-    <circle id="楕円形_28" data-name="楕円形 28" class="cls-4" cx="5" cy="5" r="5" transform="translate(729 1463)"/>
-    <circle id="楕円形_29" data-name="楕円形 29" class="cls-4" cx="5" cy="5" r="5" transform="translate(700 1463)"/>
-    <circle id="楕円形_30" data-name="楕円形 30" class="cls-4" cx="5" cy="5" r="5" transform="translate(845 1463)"/>
-    <circle id="楕円形_31" data-name="楕円形 31" class="cls-4" cx="5" cy="5" r="5" transform="translate(816 1463)"/>
-    <circle id="楕円形_32" data-name="楕円形 32" class="cls-4" cx="5" cy="5" r="5" transform="translate(497 1467)"/>
-    <circle id="楕円形_33" data-name="楕円形 33" class="cls-4" cx="5" cy="5" r="5" transform="translate(498 1496)"/>
-    <circle id="楕円形_34" data-name="楕円形 34" class="cls-4" cx="5" cy="5" r="5" transform="translate(497 1525)"/>
-    <path id="パス_9" data-name="パス 9" class="cls-5" d="M920.583,1556.792s-2.978,24.458,11.565,30.413,29.807-13.777,46.5-7.386,5.928,25.672,20.268,32.949,24.7-10.783,37.093-3.842,4.162,22.479,12.494,31.6,20.834,4.9,20.834,4.9l.012-76.155s-1.284-5.785-4.213-8.891-9.84-3.86-9.84-3.86Z" transform="translate(-179 -106)"/>
-    <path id="パス_10" data-name="パス 10" class="cls-5" d="M705,1556.52s-14.139,12.353-16.858,24.856,9.615,13.126,5.983,25.159-16.514,10.085-20.51,22.972,4.525,28.577,4.525,28.577-5.475-.088-8.625-3.66a14.688,14.688,0,0,1-3.319-8.293l.12-74.012s.05-7.237,3.2-11.049,8.946-4.55,8.946-4.55Z" transform="translate(-179.542 -106)"/>
+    <rect id="長方形_39" data-name="長方形 39" width="384" height="85" rx="14" transform="translate(493 1457)" fill="#961818"/>
+    <rect id="長方形_40" data-name="長方形 40" width="351" height="52" rx="14" transform="translate(510 1474.471)" fill="#c92929"/>
+    <circle id="楕円形_5" data-name="楕円形 5" cx="5" cy="5" r="5" transform="translate(525 1528)" fill="#ffb34b"/>
+    <circle id="楕円形_6" data-name="楕円形 6" cx="5" cy="5" r="5" transform="translate(667.671 1528)" fill="#ffb34b"/>
+    <circle id="楕円形_7" data-name="楕円形 7" cx="5" cy="5" r="5" transform="translate(639.038 1528)" fill="#ffb34b"/>
+    <circle id="楕円形_8" data-name="楕円形 8" cx="5" cy="5" r="5" transform="translate(610.405 1528)" fill="#ffb34b"/>
+    <circle id="楕円形_9" data-name="楕円形 9" cx="5" cy="5" r="5" transform="translate(581.772 1528)" fill="#ffb34b"/>
+    <circle id="楕円形_10" data-name="楕円形 10" cx="5" cy="5" r="5" transform="translate(554 1528)" fill="#ffb34b"/>
+    <circle id="楕円形_11" data-name="楕円形 11" cx="5" cy="5" r="5" transform="translate(782.203 1528)" fill="#ffb34b"/>
+    <circle id="楕円形_12" data-name="楕円形 12" cx="5" cy="5" r="5" transform="translate(753.57 1528)" fill="#ffb34b"/>
+    <circle id="楕円形_13" data-name="楕円形 13" cx="5" cy="5" r="5" transform="translate(724.937 1528)" fill="#ffb34b"/>
+    <circle id="楕円形_14" data-name="楕円形 14" cx="5" cy="5" r="5" transform="translate(696.304 1528)" fill="#ffb34b"/>
+    <circle id="楕円形_15" data-name="楕円形 15" cx="5" cy="5" r="5" transform="translate(861 1467.419)" fill="#ffb34b"/>
+    <circle id="楕円形_16" data-name="楕円形 16" cx="5" cy="5" r="5" transform="translate(862 1495.484)" fill="#ffb34b"/>
+    <circle id="楕円形_17" data-name="楕円形 17" cx="5" cy="5" r="5" transform="translate(861 1523.548)" fill="#ffb34b"/>
+    <circle id="楕円形_18" data-name="楕円形 18" cx="5" cy="5" r="5" transform="translate(839 1528)" fill="#ffb34b"/>
+    <circle id="楕円形_19" data-name="楕円形 19" cx="5" cy="5" r="5" transform="translate(810 1528)" fill="#ffb34b"/>
+    <circle id="楕円形_20" data-name="楕円形 20" cx="5" cy="5" r="5" transform="translate(526 1463)" fill="#ffb34b"/>
+    <circle id="楕円形_21" data-name="楕円形 21" cx="5" cy="5" r="5" transform="translate(668.658 1463)" fill="#ffb34b"/>
+    <circle id="楕円形_22" data-name="楕円形 22" cx="5" cy="5" r="5" transform="translate(640.025 1463)" fill="#ffb34b"/>
+    <circle id="楕円形_23" data-name="楕円形 23" cx="5" cy="5" r="5" transform="translate(611.392 1463)" fill="#ffb34b"/>
+    <circle id="楕円形_24" data-name="楕円形 24" cx="5" cy="5" r="5" transform="translate(582.76 1463)" fill="#ffb34b"/>
+    <circle id="楕円形_25" data-name="楕円形 25" cx="5" cy="5" r="5" transform="translate(555 1463)" fill="#ffb34b"/>
+    <circle id="楕円形_26" data-name="楕円形 26" cx="5" cy="5" r="5" transform="translate(783.19 1463)" fill="#ffb34b"/>
+    <circle id="楕円形_27" data-name="楕円形 27" cx="5" cy="5" r="5" transform="translate(754.557 1463)" fill="#ffb34b"/>
+    <circle id="楕円形_28" data-name="楕円形 28" cx="5" cy="5" r="5" transform="translate(725.924 1463)" fill="#ffb34b"/>
+    <circle id="楕円形_29" data-name="楕円形 29" cx="5" cy="5" r="5" transform="translate(697.291 1463)" fill="#ffb34b"/>
+    <circle id="楕円形_30" data-name="楕円形 30" cx="5" cy="5" r="5" transform="translate(840 1463)" fill="#ffb34b"/>
+    <circle id="楕円形_31" data-name="楕円形 31" cx="5" cy="5" r="5" transform="translate(811 1463)" fill="#ffb34b"/>
+    <circle id="楕円形_32" data-name="楕円形 32" cx="5" cy="5" r="5" transform="translate(497 1466.452)" fill="#ffb34b"/>
+    <circle id="楕円形_33" data-name="楕円形 33" cx="5" cy="5" r="5" transform="translate(498 1494.516)" fill="#ffb34b"/>
+    <circle id="楕円形_34" data-name="楕円形 34" cx="5" cy="5" r="5" transform="translate(497 1522.581)" fill="#ffb34b"/>
+    <path id="パス_9" data-name="パス 9" d="M920.583,1556.783s-2.978,23.642,11.565,29.4,29.807-13.317,46.5-7.14,5.928,24.816,20.268,31.849,24.7-10.423,37.093-3.714,4.162,21.728,12.494,30.549,20.834,4.734,20.834,4.734l.012-73.613s-1.284-5.592-4.213-8.595-9.84-3.731-9.84-3.731Z" transform="translate(-184 -106)" fill="#1a772a" stroke="#707070" stroke-width="1" opacity="0.564"/>
+    <path id="パス_10" data-name="パス 10" d="M705,1556.52s-14.139,11.988-16.858,24.122,9.615,12.739,5.983,24.416-16.514,9.787-20.51,22.293,4.525,27.733,4.525,27.733-5.475-.085-8.625-3.552a13.994,13.994,0,0,1-3.319-8.048l.12-71.826s.05-7.023,3.2-10.723,8.946-4.416,8.946-4.416Z" transform="translate(-179.542 -106)" fill="#1a772a" stroke="#707070" stroke-width="1" opacity="0.564"/>
   </g>
 </svg>
