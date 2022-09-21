@@ -2,7 +2,7 @@
   <defs>
     <style>
       .cls-1 {
-        fill: #5f1212;
+        fill: #47125f;
         stroke: #707070;
       }
 
@@ -19,12 +19,12 @@
       }
     </style>
   </defs>
-  <g id="グループ_13" data-name="グループ 13" transform="translate(-197 -822)">
-    <g id="長方形_5" data-name="長方形 5" class="cls-1" transform="translate(197 822)">
+  <g id="グループ_15" data-name="グループ 15" transform="translate(-618 -1289)">
+    <g id="長方形_5" data-name="長方形 5" class="cls-1" transform="translate(618 1289)">
       <rect class="cls-3" width="405" height="103" rx="14"/>
       <rect class="cls-4" x="0.5" y="0.5" width="404" height="102" rx="13.5"/>
     </g>
-    <g id="グループ_12" data-name="グループ 12">
+    <g id="グループ_12" data-name="グループ 12" transform="translate(421 467)">
       <path id="パス_12" data-name="パス 12" class="cls-2" d="M308.074,823h12.663L291.764,843.14s-4.038.46-5.384-1.012,0-4.424,0-4.424Z" transform="translate(64.241 0.001)"/>
       <path id="パス_13" data-name="パス 13" class="cls-2" d="M308.074,823h12.663L291.764,843.14s-4.038.46-5.384-1.012,0-4.424,0-4.424Z" transform="translate(146.241 0.001)"/>
       <path id="パス_14" data-name="パス 14" class="cls-2" d="M308.074,823h12.663L291.764,843.14s-4.038.46-5.384-1.012,0-4.424,0-4.424Z" transform="translate(118.241 0.001)"/>
