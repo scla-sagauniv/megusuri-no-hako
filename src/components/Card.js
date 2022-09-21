@@ -1,6 +1,13 @@
 import React from 'react';
 
-const Card = ({ priority, title, handleClick }) => {
+const Card = ({ id, priority, title, handleClick, selectTask }) => {
+  const onClick = () => {
+    console.log('click');
+    console.debug(handleClick);
+    handleClick();
+    selectTask(id);
+  };
+
   return (
     <div
       className={
@@ -12,7 +19,7 @@ const Card = ({ priority, title, handleClick }) => {
           ? 'food cheese'
           : 'food lettuce'
       }
-      onClick={handleClick}
+      onClick={onClick}
     >
       {title}
     </div>

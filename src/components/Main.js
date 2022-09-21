@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import dummyData from '../dummyData';
 import Card from '../components/Card';
 
-const Main = ({ setShowDeleteModal }) => {
-  //const [状態変数, 状態を変更するための関数] = useState(状態の初期値);
-  const [data, setData] = useState(dummyData);
-
+const Main = ({ setShowDeleteModal, selectTaskId, data, setData }) => {
   const onDragEnd = (result) => {
     console.log(result);
     if (!result.destination) return;
@@ -104,10 +100,11 @@ const Main = ({ setShowDeleteModal }) => {
                               }}
                             >
                               <Card
-                                key={tasks.id}
+                                id={tasks.id}
                                 priority={priority}
                                 title={tasks.title}
                                 handleClick={setShowDeleteModal}
+                                selectTask={selectTaskId}
                               />
                             </div>
                           )}

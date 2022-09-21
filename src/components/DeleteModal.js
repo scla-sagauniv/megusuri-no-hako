@@ -8,7 +8,7 @@ const DeleteModal = (props) => {
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    console.log(data); //本来はデータを追加するコード
     closeDeleteModal();
     reset();
   };
@@ -20,11 +20,12 @@ const DeleteModal = (props) => {
         <div id='overlay'>
           <div id='modalContent'>
             <form onSubmit={handleSubmit(onSubmit)}>
+              <input id='task_uuid' type='hidden' {...register('task_uuid')} />
               <div className='setting_box'>
                 <input
-                  id='task_title'
+                  value={props.task.title}
                   type='text'
-                  {...register('task_title')}
+                  {...register('title')}
                   placeholder='タイトルを入力'
                 />
               </div>

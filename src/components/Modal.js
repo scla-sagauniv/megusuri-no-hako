@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { useForm } from 'react-hook-form';
 
 const Modal = (props) => {
@@ -22,6 +23,12 @@ const Modal = (props) => {
         <div id='overlay'>
           <div id='modalContent'>
             <form onSubmit={handleSubmit(onSubmit)}>
+              <input
+                id='task_uuid'
+                type='hidden'
+                value={uuidv4()}
+                {...register('task_uuid')}
+              />
               <div className='setting_box'>
                 <input
                   id='task_title'
