@@ -1,16 +1,10 @@
-import React, {useState} from 'react';
-import Modal from "../components/Modal";
+import React from 'react';
 
-
- 
 const Card = ({ priority, title }) => {
-  const handleClick = (e) =>{
+  const handleClick = (e) => {
     //モーダルを起動する処理
     console.log(e);
- 
-  }
-
-  
+  };
 
   return (
     <div
@@ -23,9 +17,7 @@ const Card = ({ priority, title }) => {
           ? 'food cheese'
           : 'food lettuce'
       }
-
       onClick={handleClick}
-      
     >
       {title}
     </div>
