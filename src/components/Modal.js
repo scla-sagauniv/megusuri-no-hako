@@ -1,6 +1,8 @@
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useForm } from 'react-hook-form';
+import { updateDoc, doc } from 'firebase/firestore';
+import { db } from '../FirebaseConfig.js';
 
 const Modal = (props) => {
   //データベースに保存する処理を記述
@@ -12,7 +14,10 @@ const Modal = (props) => {
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    updateDoc(doc(db, 'tomaTrelloUserId', 'todo'), {
+      tasks: [...props.todoList.tasks, data],
+    });
+    console.log(props.todoList);
     closeModal();
   };
 

@@ -8,6 +8,7 @@ import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from '../FirebaseConfig';
 import '../css/Home.css';
 import pic from '../img/MacIcon_mos.png';
+import { useFireStore } from '../hooks/useFireStore';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -16,6 +17,16 @@ const Home = () => {
   const [modal, setShowModal] = useState(false);
   const [deletemodal, setShowDeleteModal] = useState(false);
   const [selectedTaskId, selectTaskId] = useState();
+
+  const { data: todoList, getFireStoreList } = useFireStore();
+
+  useEffect(() => {
+    getFireStoreList();
+  }, []);
+
+  useEffect(() => {
+    console.log('data', todoList);
+  }, [todoList]);
 
   //const [状態変数, 状態を変更するための関数] = useState(状態の初期値);
   const [data, setData] = useState();
@@ -104,13 +115,18 @@ const Home = () => {
                   </button>
                 </div>
               </div>
-              <Main
+              {/* <Main
                 setShowDeleteModal={showDeleteModal}
                 selectTaskId={selectTaskId}
                 data={data}
                 setData={setData}
+              /> */}
+              <Modal
+                showFlag={modal}
+                // task={computedTask()}
+                todoList={todoList}
+                setShowModal={setShowModal}
               />
-              <Modal showFlag={modal} setShowModal={setShowModal} />
               {selectedTaskId && (
                 <DeleteModal
                   showFlag={deletemodal}

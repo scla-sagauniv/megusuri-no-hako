@@ -7,7 +7,7 @@ export const useFireStore = () => {
 
   const getFireStoreList = async () => {
     try {
-      const snapshot = await getDoc(doc(db, '未着手', 'h36iDOP313g3ZTEBTnhB'));
+      const snapshot = await getDoc(doc(db, 'tomaTrelloUserId', 'todo'));
       console.log(snapshot);
       const res = snapshot.data();
 
