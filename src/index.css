@@ -15,10 +15,12 @@ body {
   color: #1f1b1b;
   line-height: 1.5;
   font-family: 'M PLUS Rounded 1c';
+  margin: 0 90px;
 }
 
 .trello {
   display: flex;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
