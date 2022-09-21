@@ -2,8 +2,7 @@ import React from 'react';
 
 const Card = ({ id, priority, title, handleClick, selectTask }) => {
   const onClick = () => {
-    console.log('click');
-    console.debug(handleClick);
+    //console.debug(handleClick);
     handleClick();
     selectTask(id);
   };

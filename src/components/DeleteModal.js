@@ -1,8 +1,15 @@
+import { render } from '@testing-library/react';
 import { useForm } from 'react-hook-form';
 
 const DeleteModal = (props) => {
   const closeDeleteModal = () => {
-    props.setShowDeleteModal(false);
+    props.close();
+  };
+
+  const deleteTask = () => {
+    //削除機能を追加
+    console.log(props.task.id);
+    closeDeleteModal();
   };
 
   const { register, handleSubmit, reset } = useForm();
@@ -17,16 +24,28 @@ const DeleteModal = (props) => {
     <>
       {props.showFlag ? (
         // showFlagがtrueだったらformを表示する
+
         <div id='overlay'>
           <div id='modalContent'>
+            <input
+              className='close_btn'
+              type='submit'
+              value='閉じる'
+              onClick={closeDeleteModal}
+            />
             <form onSubmit={handleSubmit(onSubmit)}>
-              <input id='task_uuid' type='hidden' {...register('task_uuid')} />
+              <input
+                id='task_uuid'
+                type='hidden'
+                value={props.task.id}
+                {...register('uuid')}
+              />
               <div className='setting_box'>
                 <input
-                  value={props.task.title}
+                  id='task_title'
                   type='text'
+                  defaultValue={props.task.title}
                   {...register('title')}
-                  placeholder='タイトルを入力'
                 />
               </div>
 
@@ -52,10 +71,16 @@ const DeleteModal = (props) => {
                 <input
                   id='task_description'
                   type='text'
+                  defaultValue={props.task.title}
                   {...register('task_description')}
                 />
               </div>
-              <input id='submit_btn' type='submit' value='削除' />
+
+              <input id='submit_change' type='submit' value='変更' />
+
+              <button id='submit_delete' onClick={deleteTask}>
+                削除
+              </button>
             </form>
           </div>
         </div>

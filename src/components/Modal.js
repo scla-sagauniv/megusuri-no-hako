@@ -22,6 +22,12 @@ const Modal = (props) => {
         // showFlagがtrueだったらformを表示する
         <div id='overlay'>
           <div id='modalContent'>
+            <input
+              className='close_btn'
+              type='submit'
+              value='閉じる'
+              onClick={closeModal}
+            />
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
                 id='task_uuid'
@@ -63,7 +69,12 @@ const Modal = (props) => {
                   {...register('task_description')}
                 />
               </div>
-              <input id='submit_btn' type='submit' value='追加' />
+              <input
+                id='submit_btn'
+                type='submit'
+                value='追加'
+                {...register('type', '追加')}
+              />
             </form>
           </div>
         </div>

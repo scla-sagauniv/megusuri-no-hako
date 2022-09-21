@@ -4,7 +4,7 @@ import Card from '../components/Card';
 
 const Main = ({ setShowDeleteModal, selectTaskId, data, setData }) => {
   const onDragEnd = (result) => {
-    console.log(result);
+    //console.log(result);
     if (!result.destination) return;
     const { source, destination } = result;
 

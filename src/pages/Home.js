@@ -27,6 +27,11 @@ const Home = () => {
     setShowDeleteModal(true);
   };
 
+  const closeDeleteModal = () => {
+    setShowDeleteModal(false);
+    selectTaskId(undefined);
+  };
+
   /* ↓ログインしているかどうかを判定する */
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
@@ -44,11 +49,11 @@ const Home = () => {
     console.debug('computedTask');
     const [pending, active, done] = data;
 
-    console.debug(
-      pending.tasks.filter((task) => task.id === selectedTaskId)[0],
-    );
-    console.debug(active.tasks.filter((task) => task.id === selectedTaskId)[0]);
-    console.debug(done.tasks.filter((task) => task.id === selectedTaskId)[0]);
+    // console.debug(
+    //   pending.tasks.filter((task) => task.id === selectedTaskId)[0],
+    // );
+    // console.debug(active.tasks.filter((task) => task.id === selectedTaskId)[0]);
+    // console.debug(done.tasks.filter((task) => task.id === selectedTaskId)[0]);
 
     if (pending.tasks.filter((task) => task.id === selectedTaskId)[0]) {
       return pending.tasks.filter((task) => task.id === selectedTaskId)[0];
@@ -88,11 +93,14 @@ const Home = () => {
                 setData={setData}
               />
               <Modal showFlag={modal} setShowModal={setShowModal} />
-              <DeleteModal
-                showFlag={deletemodal}
-                setShowDeleteModal={setShowDeleteModal}
-                task={computedTask()}
-              />
+              {selectedTaskId && (
+                <DeleteModal
+                  showFlag={deletemodal}
+                  setShowDeleteModal={setShowDeleteModal}
+                  close={closeDeleteModal}
+                  task={computedTask()}
+                />
+              )}
             </div>
           )}
         </>
