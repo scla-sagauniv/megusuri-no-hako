@@ -8,7 +8,8 @@ import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from '../FirebaseConfig.js';
 import '../css/Home.css';
 import pic from '../img/MacIcon_mos.png';
-import { useFireStore } from '../hooks/useFireStore';
+// import { useFireStore } from '../hooks/useFireStore';
+import { defaultTaskDefinition } from '../constants';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -17,19 +18,29 @@ const Home = () => {
   const [modal, setShowModal] = useState(false);
   const [deletemodal, setShowDeleteModal] = useState(false);
   const [selectedTaskId, selectTaskId] = useState();
+  const [todoList, setTodoList] = useState(null);
 
-  const { data: todoList, getFireStoreList } = useFireStore();
+  // const { data: todoList, getFireStoreList } = useFireStore();
 
   useEffect(() => {
-    getFireStoreList();
+    // getFireStoreList();
+
+    const taskData = localStorage.getItem('taskData');
+    if (taskData) {
+      setTodoList(JSON.parse(taskData));
+    } else {
+      setTodoList(defaultTaskDefinition);
+    }
   }, []);
 
   useEffect(() => {
     console.log('data', todoList);
+    if (todoList) {
+      localStorage.setItem('taskData', JSON.stringify(todoList));
+    }
   }, [todoList]);
 
   //const [状態変数, 状態を変更するための関数] = useState(状態の初期値);
-  const [data, setData] = useState();
 
   const showModal = () => {
     setShowModal(true);
@@ -57,26 +68,85 @@ const Home = () => {
     navigate('/login/');
   };
 
+  const addTaskHandler = (newTask) => {
+    setTodoList({
+      ...todoList,
+      todo: {
+        ...todoList.todo,
+        tasks: [newTask, ...todoList.todo.tasks /* newTask */],
+      },
+    });
+  };
+
+  const deleteTaskHandler = (taskUuid) => {
+    // taskUuidと同じtaskを見つける
+    // タスクを消す(消し方わからない)
+    setTodoList({
+      ...todoList,
+      todo: {
+        ...todoList.todo,
+        tasks: todoList.todo.tasks.filter((task) => task.uuid !== taskUuid),
+      },
+      progress: {
+        ...todoList.progress,
+        tasks: todoList.progress.tasks.filter((task) => task.uuid !== taskUuid),
+      },
+      done: {
+        ...todoList.done,
+        tasks: todoList.done.tasks.filter((task) => task.uuid !== taskUuid),
+      },
+    });
+    // ローカルストレージのtaskDataのuuidがtaskUuidと同じものを削除
+    // localStorage.removeItem('taskData', todoList);
+  };
+
+  const changeTaskHandler = (taskUuid, updatedTask) => {
+    console.log('changeTaskHandler', taskUuid, updatedTask);
+    // deleteTaskHandler(taskUuid);
+    // addTaskHandler(updatedTask);
+    setTodoList({
+      ...todoList,
+      todo: {
+        ...todoList.todo,
+        tasks: todoList.todo.tasks.map((task) =>
+          task.uuid === taskUuid ? updatedTask : task,
+        ),
+      },
+      progress: {
+        ...todoList.progress,
+        tasks: todoList.progress.tasks.map((task) =>
+          task.uuid === taskUuid ? updatedTask : task,
+        ),
+      },
+      done: {
+        ...todoList.done,
+        tasks: todoList.done.tasks.map((task) =>
+          task.uuid === taskUuid ? updatedTask : task,
+        ),
+      },
+    });
+  };
+
   const computedTask = useCallback(() => {
     console.debug('computedTask');
-    const [pending, active, done] = data;
+    const { todo, progress, done } = todoList;
 
     // console.debug(
-    //   pending.tasks.filter((task) => task.id === selectedTaskId)[0],
+    //   todo.tasks.filter((task) => task.id === selectedTaskId)[0],
     // );
-    // console.debug(active.tasks.filter((task) => task.id === selectedTaskId)[0]);
+    // console.debug(progress.tasks.filter((task) => task.id === selectedTaskId)[0]);
     // console.debug(done.tasks.filter((task) => task.id === selectedTaskId)[0]);
 
-    if (pending.tasks.filter((task) => task.id === selectedTaskId)[0]) {
-      return pending.tasks.filter((task) => task.id === selectedTaskId)[0];
+    if (todo.tasks.filter((task) => task.uuid === selectedTaskId)[0]) {
+      return todo.tasks.filter((task) => task.uuid === selectedTaskId)[0];
     }
 
-    if (active.tasks.filter((task) => task.id === selectedTaskId)[0]) {
-      return active.tasks.filter((task) => task.id === selectedTaskId)[0];
+    if (progress.tasks.filter((task) => task.uuid === selectedTaskId)[0]) {
+      return progress.tasks.filter((task) => task.uuid === selectedTaskId)[0];
     }
 
-    if (done.tasks.filter((task) => task.id === selectedTaskId)[0]) {
-      return done.tasks.filter((task) => task.id === selectedTaskId)[0];
+    if (done.tasks.filter((task) => task.uuid === selectedTaskId)[0]) {
+      return done.tasks.filter((task) => task.uuid === selectedTaskId)[0];
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedTaskId]);
@@ -115,16 +185,17 @@ const Home = () => {
                   </button>
                 </div>
               </div>
-              {/* <Main
+              <Main
                 setShowDeleteModal={showDeleteModal}
                 selectTaskId={selectTaskId}
-                data={data}
-                setData={setData}
-              /> */}
+                data={todoList}
+                setData={setTodoList}
+              />
               <Modal
                 showFlag={modal}
                 // task={computedTask()}
                 todoList={todoList}
+                addTaskHandler={addTaskHandler}
                 setShowModal={setShowModal}
               />
               {selectedTaskId && (
@@ -133,6 +204,8 @@ const Home = () => {
                   setShowDeleteModal={setShowDeleteModal}
                   close={closeDeleteModal}
                   task={computedTask()}
+                  deleteTaskHandler={deleteTaskHandler}
+                  changeTaskHandler={changeTaskHandler}
                 />
               )}
             </div>

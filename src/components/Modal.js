@@ -1,8 +1,8 @@
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useForm } from 'react-hook-form';
-import { updateDoc, doc } from 'firebase/firestore';
-import { db } from '../FirebaseConfig.js';
+// import { updateDoc, doc } from 'firebase/firestore';
+// import { db } from '../FirebaseConfig.js';
 
 const Modal = (props) => {
   //データベースに保存する処理を記述
@@ -14,9 +14,11 @@ const Modal = (props) => {
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
-    updateDoc(doc(db, 'tomaTrelloUserId', 'todo'), {
-      tasks: [...props.todoList.tasks, data],
-    });
+    // updateDoc(doc(db, 'tomaTrelloUserId', 'todo'), {
+    //   tasks: [...props.todoList.tasks, data],
+    // });
+    console.log('onSubmit data', data);
+    props.addTaskHandler(data);
     console.log(props.todoList);
     closeModal();
   };
@@ -27,22 +29,22 @@ const Modal = (props) => {
         // showFlagがtrueだったらformを表示する
         <div id='overlay'>
           <div id='modalContent'>
-            <div class='batsu' onClick={closeModal}>
+            <div className='batsu' onClick={closeModal}>
               ×
             </div>
 
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
-                id='task_uuid'
+                id='uuid'
                 type='hidden'
                 value={uuidv4()}
-                {...register('task_uuid')}
+                {...register('uuid')}
               />
               <div className='setting_box'>
                 <input
-                  id='task_title'
+                  id='title'
                   type='text'
-                  {...register('task_title')}
+                  {...register('title')}
                   placeholder='タイトルを入力'
                   required
                 />
@@ -50,21 +52,17 @@ const Modal = (props) => {
 
               <div className='setting_box'>
                 <label className='settings_label'>優先度</label>
-                <select
-                  id='task_priority'
-                  {...register('task_priority')}
-                  required
-                >
-                  <option id='most_high' value='最重要'>
+                <select id='priority' {...register('priority')} required>
+                  <option id='most_high' value='1'>
                     最重要
                   </option>
-                  <option id='high' value='重要'>
+                  <option id='high' value='2'>
                     重要
                   </option>
-                  <option id='middle' value='中' selected>
+                  <option id='middle' value='3' selected>
                     中
                   </option>
-                  <option id='low' value='低'>
+                  <option id='low' value='4'>
                     低
                   </option>
                 </select>
@@ -72,18 +70,18 @@ const Modal = (props) => {
               <div className='setting_box'>
                 <label className='settings_label'>期限を指定</label>
                 <input
-                  id='task_deadline'
+                  id='deadline'
                   type='date'
-                  {...register('task_deadline')}
+                  {...register('deadline')}
                   required
                 />
               </div>
               <div className='setting_box'>
                 <label className='settings_label'>タスクの説明</label>
                 <input
-                  id='task_description'
+                  id='description'
                   type='text'
-                  {...register('task_description')}
+                  {...register('description')}
                   autoComplete='off'
                 />
               </div>

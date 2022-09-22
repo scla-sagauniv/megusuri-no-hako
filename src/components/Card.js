@@ -10,11 +10,11 @@ const Card = ({ id, priority, title, handleClick, selectTask }) => {
   return (
     <div
       className={
-        priority === 1
+        priority === '1'
           ? 'food tomato'
-          : priority === 2
+          : priority === '2'
           ? 'food meat'
-          : priority === 3
+          : priority === '3'
           ? 'food cheese'
           : 'food lettuce'
       }

@@ -26,17 +26,17 @@ background-color: white;
 border-radius: 10px;
 }
 
-#task_form{
+#form{
 display: block;
 }
 
-#task_title{
+#title{
 font-size: 22px;
 border: none;
 font-weight: bold;
 }
 
-#task_priority{
+#priority{
 border: none;
 font-size: 16px;
 width: 40%;
@@ -45,14 +45,14 @@ border: 1px solid black;
 border-radius: 2%;
 }
 
-#task_deadline{
+#deadline{
 border: none;
 font-size: 16px;
 border-bottom: 2px solid black;
 width: 100%;
 }
 
-#task_description{
+#description{
 border: none;
 font-size: 16px;
 border-bottom: 2px solid black;
