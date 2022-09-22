@@ -2,6 +2,7 @@ import '../App.css';
 import React, { useState, useEffect, useCallback } from 'react';
 import Main from '../components/Main';
 import Modal from '../components/Modal';
+import ResultModal from '../components/ResultModal';
 import DeleteModal from '../components/DeleteModal';
 import { useNavigate, Navigate } from 'react-router-dom';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
@@ -14,6 +15,7 @@ const Home = () => {
   const [user, setUser] = useState('');
   const [loading, setLoading] = useState(true);
   const [modal, setShowModal] = useState(false);
+  const [resultmodal, setShowResultModal] = useState(false);
   const [deletemodal, setShowDeleteModal] = useState(false);
   const [selectedTaskId, selectTaskId] = useState();
 
@@ -22,6 +24,10 @@ const Home = () => {
 
   const showModal = () => {
     setShowModal(true);
+  };
+
+  const showResultModal = () => {
+    setShowResultModal(true);
   };
 
   const showDeleteModal = () => {
@@ -111,6 +117,11 @@ const Home = () => {
                 setData={setData}
               />
               <Modal showFlag={modal} setShowModal={setShowModal} />
+              <ResultModal
+                showFlag={resultmodal}
+                setShowResultModal={setShowResultModal}
+              />
+              <input type='button' onClick={showResultModal} value='ボタン' />
               {selectedTaskId && (
                 <DeleteModal
                   showFlag={deletemodal}
