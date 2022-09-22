@@ -43,31 +43,32 @@ const Register = () => {
         <Navigate to={`/`} />
       ) : (
         <>
-        <div className='container'>
-        <img src={pic} width={"300"} height={"250"} alt='macIcon'/>
-          <h1 className='register-page'>新規登録</h1>
-          <form className='infobox' onSubmit={handleSubmit}>
-            <div className='input'>
-              <label className='email-label'>メールアドレス</label>
-              {/* ↓「value」と「onChange」を追加 */}
-              <input
-                name='email'
-                type='email'
-                value={registerEmail}
-                onChange={(e) => setRegisterEmail(e.target.value)}
-              />
-            </div>
-            <div className='input'>
-              <label className='password-label'>パスワード</label>
-              <input
-                name='password'
-                type='password'
-                value={registerPassword}
-                onChange={(e) => setRegisterPassword(e.target.value)}
-              />
-            </div>
-            <button className='register'> 登録</button>
-          </form>
+          <div className='container'>
+            <img src={pic} width={'300'} height={'250'} alt='macIcon' />
+            <h1 className='register-page'>新規登録</h1>
+            <form className='infobox' onSubmit={handleSubmit}>
+              <div className='input'>
+                <label className='email-label'>メールアドレス</label>
+                {/* ↓「value」と「onChange」を追加 */}
+                <input
+                  name='email'
+                  type='email'
+                  value={registerEmail}
+                  onChange={(e) => setRegisterEmail(e.target.value)}
+                />
+              </div>
+              <div className='input'>
+                <label className='password-label'>パスワード</label>
+                <input
+                  name='password'
+                  type='password'
+                  value={registerPassword}
+                  placeholder='8文字以上'
+                  onChange={(e) => setRegisterPassword(e.target.value)}
+                />
+              </div>
+              <button className='register'> 登録</button>
+            </form>
           </div>
         </>
       )}
