@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="100" viewBox="0 0 400 100">
-  <g id="グループ_14" data-name="グループ 14" transform="translate(-197 -822)">
+  <g id="グループ_19" data-name="グループ 19" transform="translate(-197 -822)">
     <g id="長方形_5" data-name="長方形 5" transform="translate(197 822)" fill="#5f1212" stroke="#707070" stroke-width="1">
       <rect width="400" height="100" rx="14" stroke="none"/>
       <rect x="0.5" y="0.5" width="399" height="99" rx="13.5" fill="none"/>
@@ -10,7 +10,7 @@
       <path id="パス_14" data-name="パス 14" d="M308.074,823h12.663L291.764,843.14s-4.038.46-5.384-1.012,0-4.424,0-4.424Z" transform="translate(-208.681 -821.999)" fill="#2f1414"/>
       <path id="パス_15" data-name="パス 15" d="M308.074,823h12.663L291.764,843.14s-4.038.46-5.384-1.012,0-4.424,0-4.424Z" transform="translate(-234.681 -821.999)" fill="#2f1414"/>
       <path id="パス_16" data-name="パス 16" d="M300.272,827.976h8.609L291.764,843.14s-4.038.46-5.384-1.012,0-4.424,0-4.424Z" transform="translate(-142.681 -826.976)" fill="#2f1414"/>
-      <path id="パス_17" data-name="パス 17" d="M300.272,827.976h8.609L291.764,843.14s-4.038.46-5.384-1.012,0-4.424,0-4.424Z" transform="translate(-285.781 -827.976)" fill="#2f1414"/>
+      <path id="パス_17" data-name="パス 17" d="M300.272,827.976h8.609L291.764,843.14s-4.038.46-5.384-1.012,0-4.424,0-4.424Z" transform="translate(-285.781 -826.976)" fill="#2f1414"/>
     </g>
   </g>
 </svg>
