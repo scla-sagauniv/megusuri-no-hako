@@ -1,23 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import Card from '../components/Card';
-import { useFireStore } from '../hooks/useFireStore';
+// import { defaultTaskDefinition } from '../constants';
+// import { useFireStore } from '../hooks/useFireStore';
 
-const Main = ({ setShowDeleteModal, selectTaskId }) => {
+const Main = ({ setShowDeleteModal, selectTaskId, data, setData }) => {
   //const [状態変数, 状態を変更するための関数] = useState(状態の初期値);
-  const [data, setData] = useState();
-  const { getFireStoreList, data: testData } = useFireStore();
+  // const [data, setData] = useState();
+  // const { getFireStoreList, data: userList } = useFireStore();
 
   useEffect(() => {
-    getFireStoreList();
+    // getFireStoreList();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    console.log('title', testData);
-    setData(testData);
-    // console.log('tasks', testData.tasks);
-  }, [testData]);
+  // useEffect(() => {
+  //   console.log('userList', userList);
+  //   // setData(userList);
+  //   // console.log('tasks', userList.tasks);
+  // }, [userList]);
 
   useEffect(() => {
     // firestoreのデータが入ったことを確認
@@ -25,20 +26,23 @@ const Main = ({ setShowDeleteModal, selectTaskId }) => {
   }, [data]);
 
   const onDragEnd = (result) => {
-    //console.log(result);
+    console.log(result);
+
+    //行き先が不明な場合終了する
     if (!result.destination) return;
     const { source, destination } = result;
 
     //動かし始めたcolumnが違うcolumnに移動したら
     if (source.droppableId !== destination.droppableId) {
       //動かし始めたcolmunの配列の番号を取得
-      const sourceColIndex = data.findIndex((e) => e.id === source.droppableId);
-      console.log(sourceColIndex);
-      //動かし終わったcolmunの配列の番号を取得
-      const destinationColIndex = data.findIndex(
-        (e) => e.id === destination.droppableId,
+      const sourceColIndex = Object.keys(data).find(
+        (key) => key === source.droppableId,
       );
-      console.log(destinationColIndex);
+
+      //動かし終わったcolmunの配列の番号を取得
+      const destinationColIndex = Object.keys(data).find(
+        (key) => key === destination.droppableId,
+      );
 
       const sourceCol = data[sourceColIndex];
       const destinationCol = data[destinationColIndex];
@@ -47,7 +51,6 @@ const Main = ({ setShowDeleteModal, selectTaskId }) => {
       //後でsplice関数でその動かし始めたタスクを削除するため
       //sourceTaskに配列をコピーしておく(破壊操作を後でするため)
       const sourceTask = [...sourceCol.tasks];
-      console.log(sourceTask);
 
       //動かし始めたタスクに所属していたカラムの中のタスクをすべて取得
       //後でsplice関数でその動かし始めたタスクを追加するため
@@ -65,11 +68,13 @@ const Main = ({ setShowDeleteModal, selectTaskId }) => {
       setData(data);
     } else {
       //同じカラム内でのタスクの入れかえ
-      const sourceColIndex = data.findIndex((e) => e.id === source.droppableId);
+      const sourceColIndex = Object.keys(data).find(
+        (key) => key === source.droppableId,
+      );
       const sourceCol = data[sourceColIndex];
-      console.log(sourceCol);
+
       const sourceTask = [...sourceCol.tasks];
-      console.log(sourceTask);
+
       const [removed] = sourceTask.splice(source.index, 1);
       sourceTask.splice(destination.index, 0, removed);
 
@@ -79,15 +84,19 @@ const Main = ({ setShowDeleteModal, selectTaskId }) => {
     }
   };
 
+  //データが存在しない時はフォームを表示しない（空タグを表示）
+  if (!data) return <></>;
+
   return (
     <>
       {data ? (
         <DragDropContext onDragEnd={onDragEnd}>
           <div className='trello'>
-            {data.map((section) => {
+            {Object.keys(data).map((key) => {
+              const section = data[key];
               const id = section.id;
               return (
-                <Droppable key={section.id} droppableId={section.id}>
+                <Droppable key={key} droppableId={key}>
                   {(provided) => (
                     <div
                       className={id !== 4 ? 'trello-section' : 'done-section'}
@@ -104,13 +113,13 @@ const Main = ({ setShowDeleteModal, selectTaskId }) => {
                         {section.title}
                       </div>
                       <div className='trello-section-content'>
-                        {section.tasks.map((tasks, index) => {
-                          const priority = tasks.priority;
+                        {section.tasks.map((task, index) => {
+                          console.log('inner map', task);
                           return (
                             <Draggable
-                              draggableId={tasks.id}
+                              draggableId={String(task.uuid)}
                               index={index}
-                              key={tasks.id}
+                              key={task.uuid}
                             >
                               {(provided, snapshot) => (
                                 <div
@@ -123,9 +132,9 @@ const Main = ({ setShowDeleteModal, selectTaskId }) => {
                                   }}
                                 >
                                   <Card
-                                    id={tasks.id}
-                                    priority={priority}
-                                    title={tasks.title}
+                                    id={task.uuid}
+                                    priority={task.priority}
+                                    title={task.title}
                                     handleClick={setShowDeleteModal}
                                     selectTask={selectTaskId}
                                   />
