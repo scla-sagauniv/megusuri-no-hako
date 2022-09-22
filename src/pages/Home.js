@@ -121,7 +121,6 @@ const Home = () => {
                 showFlag={resultmodal}
                 setShowResultModal={setShowResultModal}
               />
-              <input type='button' onClick={showResultModal} value='ボタン' />
               {selectedTaskId && (
                 <DeleteModal
                   showFlag={deletemodal}
@@ -130,6 +129,15 @@ const Home = () => {
                   task={computedTask()}
                 />
               )}
+              <div className='wrap_allDoneBtn'>
+                <button
+                  className='allDoneBtn'
+                  type='button'
+                  onClick={showResultModal}
+                >
+                  バーガー完成
+                </button>
+              </div>
             </div>
           )}
         </>

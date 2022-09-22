@@ -1,56 +1,66 @@
-.header{
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
-
+.header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
 }
 
-
-.logout{
-    background-color: rgb(70,92,29);
-    border-radius: 5px;
+.logout {
+  background-color: rgb(70, 92, 29);
+  border-radius: 5px;
 }
 
-.logout:hover{
-    background-color: rgb(88, 118, 34);
+.logout:hover {
+  background-color: rgb(88, 118, 34);
 }
 
-.left{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-
-.right{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.task_add_button{ 
-    border: 0px;
-    background-color: transparent;
-    width: 32px;
-    height: 32px;
-    background-image: url("../img/addButton.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-} 
-
-.apptitle{
-    margin-right: 15px;
-    font-size: 30px;
-    font-weight: 800px;
-    color: white;
+.task_add_button {
+  border: 0px;
+  background-color: transparent;
+  width: 32px;
+  height: 32px;
+  background-image: url('../img/addButton.png');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.logout{
-    padding: 5px 8px;
-    color: white;
+.apptitle {
+  margin-right: 15px;
+  font-size: 30px;
+  font-weight: 800px;
+  color: white;
 }
 
-.user{
-    color: white;
+.logout {
+  padding: 5px 8px;
+  color: white;
+}
+
+.user {
+  color: white;
+}
+
+.allDoneBtn {
+  background-color: rgb(255, 225, 0);
+  color: rgb(201, 21, 21);
+  border: none;
+  border-radius: 5px;
+  width: 120px;
+  height: 30px;
+}
+
+.wrap_allDoneBtn {
+  text-align: right;
 }

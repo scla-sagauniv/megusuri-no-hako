@@ -1,91 +1,105 @@
-#overlay{
+#overlay {
   /*　画面全体を覆う設定　*/
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background-color:rgba(0,0,0,0.5);
-  
-    /*　画面の中央に要素を表示させる設定　*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 
-#test{
- display: flex;
+  /*　画面の中央に要素を表示させる設定　*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#modalContent{
-
-width: 40%;
-padding:2% 5%;
-background-color: white;
-border-radius: 10px;
+#test {
+  display: flex;
 }
 
-#task_form{
-display: block;
+#modalContent {
+  width: 40%;
+  padding: 2% 5%;
+  background-color: white;
+  border-radius: 10px;
 }
 
-#task_title{
-font-size: 20px;
-border: none;
-font-weight: bold;
+#task_form {
+  display: block;
 }
 
-#task_priority{
-border: none;
-font-size: 16px;
-width: 40%;
-text-align: center;
-border: 1px solid black;
-border-radius: 2%;
+#task_title {
+  font-size: 20px;
+  border: none;
+  font-weight: bold;
 }
 
-#task_deadline{
-border: none;
-font-size: 16px;
-border-bottom: 2px solid black;
-width: 100%;
+#task_priority {
+  border: none;
+  font-size: 16px;
+  width: 40%;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 2%;
 }
 
-#task_description{
-border: none;
-font-size: 16px;
-border-bottom: 2px solid black;
-width: 100%;
+#task_deadline {
+  border: none;
+  font-size: 16px;
+  border-bottom: 2px solid black;
+  width: 100%;
 }
 
-#submit_delete{
+#task_description {
+  border: none;
+  font-size: 16px;
+  border-bottom: 2px solid black;
+  width: 100%;
+}
+
+#submit_delete {
   width: 20%;
   float: right;
 }
 
-#submit_change{
+#submit_change {
   width: 20%;
 }
 
-#submit_btn{
-  width: 20%;
-  float: right;
-}
-.close_btn{
+#submit_btn {
   width: 20%;
   float: right;
 }
-
-.setting_box{
-height: 50%;
-margin-bottom: 10px;
+.close_btn {
+  width: 20%;
+  float: right;
 }
 
-.settings_label{
-color: black;
-display: block;
+.setting_box {
+  height: 50%;
+  margin-bottom: 10px;
 }
 
+.settings_label {
+  color: black;
+  display: block;
+}
 
+.resultModal {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
 
+.closeButton {
+  width: 30%;
+  background-color: white;
+  border: 0;
+  margin: 0 auto;
+  border-radius: 3px;
+  height: 24px;
+}
+
+.resultImg {
+  margin-bottom: 30px;
+}
