@@ -47,32 +47,36 @@ const Login = () => {
               <div className='input'>
                 <label className='email-label'>メールアドレス</label>
                 <input
-                      name='email'
-                      type='email'
-                      value={loginEmail}
-                      onChange={(e) => setLoginEmail(e.target.value)}
-                    />
+                  name='email'
+                  type='email'
+                  value={loginEmail}
+                  onChange={(e) => setLoginEmail(e.target.value)}
+                />
               </div>
               <div className='input'>
                 <label className='password-label'>パスワード</label>
                 <input
-                      name='password'
-                      type='password'
-                      value={loginPassword}
-                      onChange={(e) => setLoginPassword(e.target.value)}
-                    />
+                  name='password'
+                  type='password'
+                  value={loginPassword}
+                  onChange={(e) => setLoginPassword(e.target.value)}
+                />
               </div>
               <div className='input'>
                 <button className='login-button'>ログイン</button>
-                <button className='register-button' onClick={() => navigate('/register/')}>新規登録</button>
+                <button
+                  className='register-button'
+                  onClick={() => navigate('/register/')}
+                >
+                  新規登録
+                </button>
               </div>
             </form>
           </div>
         </>
-        )
-      }
+      )}
     </>
-  )
-}
+  );
+};
 
 export default Login;

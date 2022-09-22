@@ -1,4 +1,4 @@
-import { getDoc, doc } from 'firebase/firestore';
+import { getDocs, collection } from 'firebase/firestore';
 import { useState } from 'react';
 import { db } from '../FirebaseConfig.js';
 
@@ -7,11 +7,15 @@ export const useFireStore = () => {
 
   const getFireStoreList = async () => {
     try {
-      const snapshot = await getDoc(doc(db, '未着手', 'h36iDOP313g3ZTEBTnhB'));
-      console.log(snapshot);
-      const res = snapshot.data();
+      const snapshot = await getDocs(collection(db, 'tomaTrelloUserId'));
+      let taskColumns = [];
+      snapshot.forEach((doc) => {
+        taskColumns.push(doc.data());
+        // console.log(doc.id, " => ", doc.data());
+      });
+      taskColumns.reverse();
 
-      setData(res);
+      setData(taskColumns);
     } catch (error) {
       console.log(error);
     }

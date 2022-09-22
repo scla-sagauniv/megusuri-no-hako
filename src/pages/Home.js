@@ -5,7 +5,7 @@ import Modal from '../components/Modal';
 import DeleteModal from '../components/DeleteModal';
 import { useNavigate, Navigate } from 'react-router-dom';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
-import { auth } from '../FirebaseConfig';
+import { auth } from '../FirebaseConfig.js';
 import '../css/Home.css';
 import pic from '../img/MacIcon_mos.png';
 
